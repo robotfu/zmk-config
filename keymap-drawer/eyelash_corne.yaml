@@ -492,3 +492,4 @@ layers:
 combos:
 - p: [18, 22]
   k: {t: button, h: toggle}
+  l: [QWERTY]

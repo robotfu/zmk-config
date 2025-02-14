@@ -57,6 +57,7 @@
         button {
             bindings = <&to 9>;
             key-positions = <18 22>;
+            layers = <0>;
         };
     };
 

@@ -80,6 +80,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            label = "nomod";
         };
 
         n3-r {

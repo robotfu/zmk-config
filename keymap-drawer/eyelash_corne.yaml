@@ -20,7 +20,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - HOME
-  - {t: n0, h: toggle}
+  - {t: nomod, h: toggle}
   - END
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: sym}
   - {t: '$$mdi:backspace$$', h: num}
   - {t: '$$mdi:backspace-reverse-outline$$', h: fun}
-  n0:
+  nomod:
   - $$mdi:keyboard-esc$$
   - Q
   - W

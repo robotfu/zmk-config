@@ -54,7 +54,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                             &kp PG_UP           &kp Y        &kp U            &kp I        &kp O       &kp P         &kp EQUAL
-&kp COLON  &mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                   &kp HOME  &kp ENTER  &kp END  &kp H        &mt LSHFT J      &mt LCTRL K  &mt LALT L  &mt LGUI SQT  &kp MINUS
+&kp COLON  &mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                   &kp HOME  &to 8      &kp END  &kp H        &mt LSHFT J      &mt LCTRL K  &mt LALT L  &mt LGUI SQT  &kp MINUS
 &kp PIPE   &kp Z       &kp X       &kp C        &kp V        &kp B      &kp SPACE              &kp PG_DN           &kp N        &kp M            &kp COMMA    &kp DOT     &kp FSLH      &kp BACKSLASH
                                    &lt 3 ESC    &lt 1 SPACE  &lt 2 TAB                                             &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
             >;
@@ -130,21 +130,21 @@
 
         b {
             bindings = <
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))                  &none         &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
-&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none                   &none  &none  &none  &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &none           &none         &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
-                             &mkp MCLK  &mkp LCLK  &mkp RCLK                                    &mkp RCLK      &mkp LCLK  &mkp MCLK
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))                   &none         &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none                    &none  &none  &none  &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &trans           &none         &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+                             &mkp MCLK  &mkp LCLK  &mkp RCLK                                     &mkp RCLK      &mkp LCLK  &mkp MCLK
             >;
 
             label = "button";
         };
 
-        layer_8 {
+        nmt {
             bindings = <
-&kp GRAVE      &kp Q  &kp W  &kp E    &kp R      &kp T                        &kp UP               &kp Y    &kp U     &kp I      &kp O    &kp P     &kp EQUAL
-&kp LS(COLON)  &kp A  &kp S  &kp D    &kp F      &kp G              &kp LEFT  &trans    &kp RIGHT  &kp H    &kp J     &kp K      &kp L    &kp SQT   &kp MINUS
-&kp LS(PIPE)   &kp Z  &kp X  &kp C    &kp V      &kp B    &trans              &kp DOWN             &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             &kp ESC  &kp SPACE  &kp TAB                                           &kp RET  &kp BSPC  &kp DEL
+&kp GRAVE      &kp Q  &kp W  &kp E  &kp R      &kp T                      &kp UP               &kp Y  &kp U      &kp I      &kp O    &kp P     &kp EQUAL
+&kp LS(COLON)  &kp A  &kp S  &kp D  &kp F      &kp G            &kp LEFT  &to 0     &kp RIGHT  &kp H  &kp J      &kp K      &kp L    &kp SQT   &kp MINUS
+&kp LS(PIPE)   &kp Z  &kp X  &kp C  &kp V      &kp B  &trans              &kp DOWN             &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &mo 3  &kp SPACE  &mo 1                                           &mo 4  &kp LSHFT  &mo 5
             >;
         };
     };

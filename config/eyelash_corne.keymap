@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -83,10 +84,10 @@
 
         l3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans  &ext_power EP_TOG  &kp C_PREVIOUS   &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &out OUT_TOG       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans                    &trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans            &trans  &trans  &trans  &trans           &kp C_PREVIOUS   &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
+&trans  &trans    &trans    &trans     &trans     &trans  &trans            &trans          &trans           &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
+                            &trans     &trans     &trans                                    &trans           &trans           &trans
             >;
 
             label = "media";

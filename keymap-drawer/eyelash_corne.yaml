@@ -20,7 +20,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - HOME
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: nmt, h: toggle}
   - END
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
@@ -377,7 +377,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+Y
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+Y
   - Ctl+V
@@ -391,7 +391,7 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
-  '8':
+  nmt:
   - {t: '`', s: '~'}
   - Q
   - W
@@ -412,7 +412,7 @@ layers:
   - F
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle}
   - $$mdi:arrow-right-bold$$
   - H
   - J
@@ -434,9 +434,9 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: \, s: '|'}
-  - $$mdi:keyboard-esc$$
+  - media
   - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:backspace-reverse-outline$$
+  - nav
+  - num
+  - $$mdi:apple-keyboard-shift$$
+  - sym

@@ -48,15 +48,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &kp LGUI  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &kp PG_UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp EQUAL
+&td0       &kp A  &kp S      &kp D     &kp F  &kp G                    &kp HOME  &kp ENTER  &kp END  &kp H        &mt RSHFT J      &mt RCTRL K  &mt RALT L  &mt RIGHT_WIN SQT  &kp MINUS
+&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp PG_DN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                             &lt 5 ESC  &lt 1 SPACE  &lt 3 TAB                                              &lt 4 ENTER  &lt 2 BACKSPACE  &kp 6 DEL
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
         lower_layer {

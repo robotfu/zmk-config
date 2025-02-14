@@ -34,7 +34,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - {t: QWERTY, h: toggle}
   - PG DN
   - N
   - M
@@ -132,7 +132,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
@@ -181,7 +181,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -230,7 +230,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: \, s: '|'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -279,7 +279,7 @@ layers:
   - '@'
   - '#'
   - '|'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -328,7 +328,7 @@ layers:
   - F2
   - F3
   - PAUSE BREAK
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -377,7 +377,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+Y
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+Y
   - Ctl+V
@@ -412,7 +412,7 @@ layers:
   - F
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: QWERTY, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-right-bold$$
   - H
   - J
@@ -426,7 +426,7 @@ layers:
   - C
   - V
   - B
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle}
   - $$mdi:arrow-down-bold$$
   - N
   - M
@@ -489,3 +489,6 @@ layers:
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
   - MENU
+combos:
+- p: [18, 22]
+  k: {t: button, h: toggle}

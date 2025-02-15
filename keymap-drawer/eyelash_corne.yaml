@@ -1,5 +1,5 @@
 layers:
-  QWERTY:
+  homemod:
   - {t: '`', s: '~'}
   - Q
   - W
@@ -34,7 +34,7 @@ layers:
   - C
   - V
   - B
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - PG DN
   - N
   - M
@@ -83,7 +83,7 @@ layers:
   - C
   - V
   - B
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - $$mdi:arrow-down-bold$$
   - N
   - M
@@ -181,7 +181,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ins
   - HOME
@@ -230,7 +230,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
@@ -279,7 +279,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -328,7 +328,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: \, s: '|'}
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -377,7 +377,7 @@ layers:
   - '@'
   - '#'
   - '|'
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -426,7 +426,7 @@ layers:
   - F2
   - F3
   - PAUSE BREAK
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -475,7 +475,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+Y
-  - {t: QWERTY, h: toggle}
+  - {t: homemod, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+Y
   - Ctl+V
@@ -492,4 +492,4 @@ layers:
 combos:
 - p: [18, 22]
   k: {t: button, h: toggle}
-  l: [QWERTY]
+  l: [homemod]

@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
       # Additional modules containing boards/shields/custom code can be listed here as well.
       # See:
       # - https://zmk.dev/docs/features/modules
@@ -16,9 +14,10 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-auto-layer
-      path: modules/zmk/auto-layer
     - name: zmk-helpers
-      path: modules/zmk/helpers
+      url: https://github.com/urob/zmk-helpers
+      revision: main
+    - name: zmk-auto-layer
+      url: https://github.com/urob/zmk-auto-layer
   self:
     path: config

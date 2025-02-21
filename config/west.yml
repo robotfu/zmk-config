@@ -19,5 +19,6 @@ manifest:
       revision: main
     - name: zmk-auto-layer
       url: https://github.com/urob/zmk-auto-layer
+      revision: main
   self:
     path: config

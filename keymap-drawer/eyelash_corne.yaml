@@ -14,19 +14,19 @@ layers:
   - P
   - {t: '=', s: +}
   - ':'
-  - {t: A, h: LWIN}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - '&hml LWIN A'
+  - '&hml LALT S'
+  - '&hml LCTRL D'
+  - '&hml LSHFT F'
   - G
   - HOME
   - {t: nomod, h: toggle}
   - END
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '''', h: LGUI, s: '"'}
+  - '&hmr LSHFT J'
+  - '&hmr LCTRL K'
+  - '&hmr LALT L'
+  - '&hmr LGUI SQT'
   - {t: '-', s: _}
   - '|'
   - Z
@@ -685,6 +685,55 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
+  backup:
+  - {t: '`', s: '~'}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - PG UP
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '=', s: +}
+  - ':'
+  - {t: A, h: LWIN}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - HOME
+  - {t: nomod, h: toggle}
+  - END
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '''', h: LGUI, s: '"'}
+  - {t: '-', s: _}
+  - '|'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: home, h: toggle}
+  - PG DN
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: \, s: '|'}
+  - {t: '$$mdi:keyboard-esc$$', h: media}
+  - {t: '$$mdi:keyboard-space$$', h: nav}
+  - {t: '$$mdi:keyboard-tab$$', h: mouse}
+  - {t: '$$mdi:keyboard-return$$', h: sym}
+  - {t: '$$mdi:backspace$$', h: num}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: fun}
 combos:
 - p: [18, 22]
   k: {t: button, h: toggle}

@@ -740,19 +740,28 @@ combos:
   l: [home]
 - p: [30, 31]
   k: Ctl+C
+  l: [home]
 - p: [31, 32]
   k: Ctl+V
+  l: [home]
 - p: [30, 32]
   k: Ctl+X
+  l: [home]
 - p: [29, 30]
   k: Ctl+Z
+  l: [home]
 - p: [29, 32]
   k: Ctl+Y
+  l: [home]
 - p: [37, 38]
   k: {t: '[', s: '{'}
+  l: [home]
 - p: [38, 39]
   k: {t: ']', s: '}'}
+  l: [home]
 - p: [23, 24]
   k: {t: (, s: <}
+  l: [home]
 - p: [24, 25]
   k: {t: ), s: '>'}
+  l: [home]

@@ -139,46 +139,55 @@
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
+            layers = <0>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <30 32>;
+            layers = <0>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <29 30>;
+            layers = <0>;
         };
 
         ctrly {
             bindings = <&kp LC(Y)>;
             key-positions = <29 32>;
+            layers = <0>;
         };
 
         lb {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <37 38>;
+            layers = <0>;
         };
 
         rb {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <38 39>;
+            layers = <0>;
         };
 
         lplt {
             bindings = <&left_paren_lt>;
             key-positions = <23 24>;
+            layers = <0>;
         };
 
         rplt {
             bindings = <&right_paren_gt>;
             key-positions = <24 25>;
+            layers = <0>;
         };
     };
 

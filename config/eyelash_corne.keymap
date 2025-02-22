@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 // #include "zmk-helpers/helper.h"
@@ -91,6 +93,24 @@
             hold-trigger-key-positions = <14 15 16 17>;
             hold-trigger-on-release;
         };
+
+        left_paren_lt: left_paren_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "(<";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        right_paren_gt: right_paren_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = ")>";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -114,6 +134,51 @@
             bindings = <&to 13>;
             key-positions = <18 22>;
             layers = <0>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <30 31>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <31 32>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <30 32>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <29 30>;
+        };
+
+        ctrly {
+            bindings = <&kp LC(Y)>;
+            key-positions = <29 32>;
+        };
+
+        lb {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <37 38>;
+        };
+
+        rb {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <38 39>;
+        };
+
+        lplt {
+            bindings = <&left_paren_lt>;
+            key-positions = <23 24>;
+        };
+
+        rplt {
+            bindings = <&right_paren_gt>;
+            key-positions = <24 25>;
         };
     };
 

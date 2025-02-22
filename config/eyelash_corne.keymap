@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+
 /*
 
    &mmv_input_listener {
@@ -106,7 +107,7 @@
         compatible = "zmk,combos";
 
         button {
-            bindings = <&to 13>;
+            bindings = <&to 0>;
             key-positions = <18 22>;
             layers = <0>;
         };
@@ -172,10 +173,10 @@
         m0 {
             display-name = "home";
             bindings = <
-&kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp PG_UP           &kp Y         &kp U             &kp I         &kp O        &kp P          &kp EQUAL
-&kp COLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp HOME  &to 1      &kp END  &kp H         &hmr LSHFT J      &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
-&kp PIPE   &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp PG_DN           &kp N         &kp M             &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
-                                     &lt 9 ESC     &lt 7 SPACE   &lt 8 TAB                                         &lt 11 ENTER  &lt 10 BACKSPACE  &lt 12 DEL
+&kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp PG_UP           &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
+&kp COLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp HOME  &none      &kp END  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
+&kp PIPE   &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp PG_DN           &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
+                                     &lt 3 ESC     &lt 1 SPACE   &lt 2 TAB                                         &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -257,18 +258,6 @@
             >;
 
             label = "button";
-        };
-
-        om0 {
-            display-name = "backup";
-            bindings = <
-&kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp PG_UP           &kp Y         &kp U             &kp I        &kp O       &kp P         &kp EQUAL
-&kp COLON  &mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G               &kp HOME  &to 1      &kp END  &kp H         &mt LSHFT J       &mt LCTRL K  &mt LALT L  &mt LGUI SQT  &kp MINUS
-&kp PIPE   &kp Z       &kp X       &kp C        &kp V        &kp B      &to 0              &kp PG_DN           &kp N         &kp M             &kp COMMA    &kp DOT     &kp FSLH      &kp BACKSLASH
-                                   &lt 9 ESC    &lt 7 SPACE  &lt 8 TAB                                         &lt 11 ENTER  &lt 10 BACKSPACE  &lt 12 DEL
-            >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
     };
 };

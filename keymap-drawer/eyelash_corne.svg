@@ -1560,6 +1560,10 @@ rect.held, rect.combo.held {
 <text x="812" y="87" class="combo tap">)</text>
 <text x="812" y="76" class="combo shifted">&gt;</text>
 </g>
+<g class="combo combopos-10">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="87" class="combo tap">A</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1274)" class="layer-num">

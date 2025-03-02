@@ -158,7 +158,7 @@
 
         test {
             bindings = <&kp A>;
-            key-positions = <23 24>;
+            key-positions = <7 8>;
             layers = <1>;
         };
     };

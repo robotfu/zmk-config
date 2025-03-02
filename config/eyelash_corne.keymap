@@ -159,7 +159,7 @@
         test {
             bindings = <&kp A>;
             key-positions = <23 24>;
-            layers = <3>;
+            layers = <1>;
         };
     };
 

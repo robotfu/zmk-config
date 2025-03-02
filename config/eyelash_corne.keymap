@@ -155,12 +155,6 @@
             bindings = <&right_paren_gt>;
             key-positions = <24 25>;
         };
-
-        test {
-            bindings = <&kp A>;
-            key-positions = <7 8>;
-            layers = <1>;
-        };
     };
 
     keymap {
@@ -257,12 +251,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        navtr {
-            if-layers = <3>;
-            then-layer = <1>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

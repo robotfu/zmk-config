@@ -104,11 +104,6 @@
     combos {
         compatible = "zmk,combos";
 
-        button {
-            bindings = <&to 0>;
-            key-positions = <18 22>;
-        };
-
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
@@ -157,6 +152,16 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <50>;
         };
+
+        lbootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 28>;
+        };
+
+        rbootloader {
+            bindings = <&bootloader>;
+            key-positions = <12 41>;
+        };
     };
 
     keymap {
@@ -166,7 +171,7 @@
             display-name = "home";
             bindings = <
 &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp PG_UP           &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
-&kp COLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp HOME  &none      &kp END  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
+&kp COLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp HOME  &tog 7     &kp END  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
 &kp PIPE   &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp PG_DN           &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
                                      &lt 3 ESC     &lt 1 SPACE   &lt 2 TAB                                         &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
             >;

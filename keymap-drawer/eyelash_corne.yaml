@@ -20,7 +20,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - HOME
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: button, h: toggle}
   - END
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
@@ -392,8 +392,6 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
 combos:
-- p: [18, 22]
-  k: {t: home, h: toggle}
 - p: [30, 31]
   k: Ctl+C
 - p: [31, 32]
@@ -412,3 +410,7 @@ combos:
   k: {t: (, s: <}
 - p: [24, 25]
   k: {t: ), s: '>'}
+- p: [0, 28]
+  k: $$mdi:progress-download$$
+- p: [12, 41]
+  k: $$mdi:progress-download$$

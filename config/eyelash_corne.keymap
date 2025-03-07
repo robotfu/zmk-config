@@ -160,6 +160,11 @@
             bindings = <&bootloader>;
             key-positions = <12 41>;
         };
+
+        ctrl-a {
+            bindings = <&kp LC(A)>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {

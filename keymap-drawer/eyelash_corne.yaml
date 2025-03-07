@@ -414,3 +414,5 @@ combos:
   k: $$mdi:progress-download$$
 - p: [12, 41]
   k: $$mdi:progress-download$$
+- p: [28, 29]
+  k: Ctl+A

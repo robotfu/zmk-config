@@ -1,120 +1,251 @@
-## preprocessor macros
+&lt {
+    flavor = "hold-preferred";
+    quick-tap-ms = <150>;
+};
 
-```devicetree
-#include <dt-bindings/zmk/mouse.h>
-#include <input/processors.dtsi>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
-
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/36.h"
-/*
-
-   &mmv_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-   };
-
-   &msc_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-   };
-
- */
-
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH1 LH0 RH0 RH1                                              // thumbs
-ZMK_HOLD_TAP(hml,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
+&mt {
+    flavor = "tap-preferred";
     require-prior-idle-ms = <125>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;
-)
-ZMK_HOLD_TAP(hmr,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <125>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;
-)
+};
 
-```
-
-## Nomod layer
-
-```devicetree
-        n0 {
-            bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R      &kp T                     &kp UP               &kp Y  &kp U      &kp I      &kp O    &kp P     &kp EQUAL
-&kp TAB     &kp A  &kp S  &kp D  &kp F      &kp G           &kp LEFT  &none     &kp RIGHT  &kp H  &kp J      &kp K      &kp L    &kp SQT   &kp MINUS
-&kp GRAVE   &kp Z  &kp X  &kp C  &kp V      &kp B  &to 0              &kp DOWN             &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                          &mo 4  &kp SPACE  &mo 2                                          &mo 3  &kp LSHFT  &mo 5
-            >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
-            label = "nomod";
+/ {
+    behaviors {
+        td0: td0 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        n.lr {
-            bindings = <
-&none  &kp TAB   &none     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP                    &none         &kp PRINTSCREEN  &kp PG_UP  &kp UP         &kp PG_DN  &kp DEL   &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL           &kp LSHFT            &kp C_VOLUME_DOWN           &none  &none  &none  &kp CAPS         &kp LEFT   &kp DOWN       &kp RIGHT  &kp BSPC  &none
-&none  &none     &none     &none               &none                &kp C_PLAY_PAUSE   &none           &none         &none            &kp HOME   &kp LG(SPACE)  &kp END    &kp RET   &none
-                           &none               &none                &none                                            &none            &none      &none
-            >;
+        hml: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT";
+            bindings = <&kp>, <&kp>;
 
-            label = "nav_media";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <23 24 25 26 7 22 36 45 46 47 37 38 39 40 41 8 9 10 11 12 23 24 25 26 27 42 43 44>;
+            hold-trigger-on-release;
         };
 
-        n.rl {
-            bindings = <
-&none  &none  &kp N7  &kp N8  &kp N9  &none                  &none         &none  &none      &none      &none     &none     &none
-&none  &none  &kp N4  &kp N5  &kp N6  &none           &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &none  &kp N1  &kp N2  &kp N3  &none  &none           &none         &none  &none      &none      &none     &none     &none
-                      &none   &kp N0  &none                                &none  &none      &none
-            >;
+        hmr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT";
+            bindings = <&kp>, <&kp>;
 
-            label = "number";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <14 15 16 17 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44 45 46 47>;
+            hold-trigger-on-release;
         };
 
-        n.ll {
-            bindings = <
-&none  &none     &none     &none      &none      &none                  &none         &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &none      &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp COLON  &none
-&none  &none     &none     &none      &none      &none  &none           &none         &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none          &none      &none
-                           &none      &none      &none                                &none  &none                 &none
-            >;
+        left_paren_lt: left_paren_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "(<";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
-            label = "para";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
 
-        n.rr {
-            bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG                  &none         &none  &none      &none      &none     &none     &none
-&none            &none            &none            &none            &none            &none                     &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none            &bt BT_SEL 3     &bt BT_SEL 2     &bt BT_SEL 1     &bt BT_SEL 0     &bt BT_SEL 4     &none           &none         &none  &none      &none      &none     &none     &none
-                                                   &none            &none            &none                                          &none  &none      &none
-            >;
+        right_paren_gt: right_paren_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = ")>";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
-            label = "bt-rgb";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
 
-        n.superi {
-            bindings = <
-&none  &none     &none     &none      &none      &none                    &none         &none    &none      &none      &none     &none     &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp F11           &none  &none  &none  &kp F12  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5   &none           &none         &kp F6   &kp F7     &kp F8     &kp F9    &kp F10   &none
-                           &none      &none      &none                                  &none    &none      &none
-            >;
+        colon_semi: colon_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_SEMI";
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
-```
+    };
+
+    rgb_encoder: rgb_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+    };
+
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <30>;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <30 31>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <31 32>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <30 32>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <29 30>;
+        };
+
+        ctrly {
+            bindings = <&kp LC(Y)>;
+            key-positions = <29 32>;
+        };
+
+        lb {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <37 38>;
+        };
+
+        rb {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <38 39>;
+        };
+
+        lplt {
+            bindings = <&left_paren_lt>;
+            key-positions = <23 24>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+        };
+
+        rplt {
+            bindings = <&right_paren_gt>;
+            key-positions = <24 25>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+        };
+
+        lbootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 28>;
+        };
+
+        rbootloader {
+            bindings = <&bootloader>;
+            key-positions = <12 41>;
+        };
+
+        ctrl-a {
+            bindings = <&kp LC(A)>;
+            key-positions = <28 29>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        m0 {
+            display-name = "home";
+            bindings = <
+&kp GRAVE    &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp PG_UP           &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
+&colon_semi  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp HOME  &tog 7     &kp END  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
+&kp PIPE     &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp PG_DN           &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
+                                       &lt 3 ESC     &lt 1 SPACE   &lt 2 TAB                                         &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+        };
+
+        lm {
+            bindings = <
+&none  &none     &none     &none      &none      &none                  &none         &kp LC(Y)   &kp LC(V)      &kp LC(C)   &kp LC(X)  &kp LC(Z)  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &kp CAPS    &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &none     &none     &none      &none      &none  &to 0           &none         &kp INSERT  &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &none
+                           &none      &none      &none                                &kp ENTER   &kp BACKSPACE  &kp DELETE
+            >;
+
+            label = "nav";
+        };
+
+        lr {
+            bindings = <
+&none  &none     &none     &none      &none      &none                  &none         &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none     &none     &none      &none      &none  &to 0           &none         &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                           &none      &none      &none                                &mkp RCLK  &mkp LCLK       &mkp MCLK
+            >;
+
+            label = "mouse";
+        };
+
+        ll {
+            bindings = <
+&none  &none     &none     &none      &none      &none                  &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &none            &kp C_PREVIOUS    &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
+&none  &none     &none     &none      &none      &none  &to 0           &none         &none            &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
+                           &none      &none      &none                                &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE
+            >;
+
+            label = "media";
+        };
+
+        rm {
+            bindings = <
+&none  &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT                   &none         &none  &none      &none      &none     &none     &none
+&none  &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL           &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp BSLH   &to 0           &none         &none  &none      &none      &none     &none     &none
+                          &kp PERIOD  &kp N0  &kp MINUS                                &none  &none      &none
+            >;
+
+            label = "num";
+            sensor-bindings = <&inc_dec_kp DOWN UP_ARROW>;
+        };
+
+        rl {
+            bindings = <
+&none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE                  &none         &none  &none      &none      &none     &none     &none
+&none  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS                  &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE         &to 0           &none         &none  &none      &none      &none     &none     &none
+                                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                                 &none  &none      &none
+            >;
+
+            label = "sym";
+        };
+
+        rr {
+            bindings = <
+&none  &kp F12  &kp F7  &kp F8      &kp F9     &kp PSCRN                        &none         &none  &none      &none      &none     &none     &none
+&none  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK            &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp F10  &kp F1  &kp F2      &kp F3     &kp PAUSE_BREAK  &to 0           &none         &none  &none      &none      &none     &none     &none
+                        &kp C_MENU  &kp SPACE  &kp TAB                                        &none  &none      &none
+            >;
+
+            label = "fun";
+        };
+
+        b {
+            bindings = <
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))                  &none         &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none                   &none  &none  &none  &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &to 0           &none         &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &none
+                             &mkp MCLK  &mkp LCLK  &mkp RCLK                                    &mkp RCLK      &mkp LCLK  &mkp MCLK
+            >;
+
+            label = "button";
+        };
+    };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
+};

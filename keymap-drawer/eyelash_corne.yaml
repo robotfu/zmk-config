@@ -392,28 +392,28 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
-  combos:
-  - p: [30, 31]
-    k: Ctl+C
-  - p: [31, 32]
-    k: Ctl+V
-  - p: [30, 32]
-    k: Ctl+X
-  - p: [29, 30]
-    k: Ctl+Z
-  - p: [29, 32]
-    k: Ctl+Y
-  - p: [37, 38]
-    k: {t: '[', s: '{'}
-  - p: [38, 39]
-    k: {t: ']', s: '}'}
-  - p: [23, 24]
-    k: {t: (, s: <}
-  - p: [24, 25]
-    k: {t: ), s: '>'}
-  - p: [0, 28]
-    k: $$mdi:progress-download$$
-  - p: [12, 41]
-    k: $$mdi:progress-download$$
-  - p: [28, 29]
-    k: Ctl+A
+combos:
+- p: [30, 31]
+  k: Ctl+C
+- p: [31, 32]
+  k: Ctl+V
+- p: [30, 32]
+  k: Ctl+X
+- p: [29, 30]
+  k: Ctl+Z
+- p: [29, 32]
+  k: Ctl+Y
+- p: [37, 38]
+  k: {t: '[', s: '{'}
+- p: [38, 39]
+  k: {t: ']', s: '}'}
+- p: [23, 24]
+  k: {t: (, s: <}
+- p: [24, 25]
+  k: {t: ), s: '>'}
+- p: [0, 28]
+  k: $$mdi:progress-download$$
+- p: [12, 41]
+  k: $$mdi:progress-download$$
+- p: [28, 29]
+  k: Ctl+A

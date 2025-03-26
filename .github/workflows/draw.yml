@@ -6,6 +6,7 @@ on:
       - "config/**"
       - .github/workflows/draw.yml
       - keymap_drawer.config.yaml
+      - keymap-drawer/*.yaml
 
 jobs:
   draw:

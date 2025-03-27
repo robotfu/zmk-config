@@ -24,7 +24,7 @@ jobs:
       - name: Combos Only
         run: |
           keymap -c "keymap_drawer.config.yaml" parse -z "config/eyelash_corne.keymap" --virtual-layers Combos >"keymap-drawer/base.yaml"
-          yq -Yi '.combos.[].l = ["Combos"]' keymap-drawer/eyelash_corne_combo.yaml
+          yq -Yi '.combos.[].l = ["Combos"]' keymap-drawer/base.yaml
           keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/base.yaml" -j "config/eyelash_corne.json" >"keymap-drawer/eyelash_corne.svg"
 
   # 再跑 caksoylar/keymap-drawer 的 job，画所有层

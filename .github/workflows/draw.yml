@@ -1,44 +1,18 @@
 name: Draw Keymap
-
 on:
+  workflow_dispatch:
   push:
     paths:
-      - 'config/eyelash_corne.keymap'
-      - 'config/eyelash_corne.json'  # 当布局文件改变时也触发
-      - 'keymap_drawer.config.yaml'
-  workflow_dispatch:  # 允许手动触发
+      - "config/**"
+      - .github/workflows/draw.yml
+      - keymap_drawer.config.yaml
 
 jobs:
   draw:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-          
-      - name: Install keymap-drawer
-        run: |
-          python -m pip install --upgrade pip
-          pip install keymap-drawer
-      
-      - name: Parse keymap
-        run: |
-          echo "解析键映射文件..."
-          keymap -c "keymap_drawer.config.yaml" parse "config/eyelash_corne.keymap" > "keymap-drawer/eyelash_corne.yaml"
-          
-      - name: Generate keymap SVG
-        run: |
-          echo "绘制键盘布局图..."
-          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -l "config/eyelash_corne.json" > "keymap-drawer/eyelash_corne.svg"
-      
-      - name: Commit and push if changed
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add keymap-drawer/eyelash_corne.yaml
-          git add keymap-drawer/eyelash_corne.svg
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update keyboard layout files" && git push)
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+      destination: "commit"
+      fail_on_error: ${{ fromJSON(true) }}

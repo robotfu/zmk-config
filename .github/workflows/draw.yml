@@ -39,7 +39,8 @@ jobs:
           yq -i '.combos[].l = ["Combos"]' "keymap-drawer/eyelash_corne.yaml"
           
           echo "绘制键盘布局图..."
-          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" > "keymap-drawer/eyelash_corne.svg"
+          # 添加 -k 参数指定键盘类型为 corne
+          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -k "corne" > "keymap-drawer/eyelash_corne.svg"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

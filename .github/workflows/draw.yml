@@ -46,7 +46,7 @@ jobs:
 
           # 再 draw：画出 diagram，输出到 eyelash_corne.svg
           keymap -c keymap_drawer.config.yaml draw keymap-drawer/eyelash_corne_temp.yaml \
-            -k crkbd \
+            -k ferris/sweep \
             > keymap-drawer/eyelash_corne.svg
 
       # 6. 可选：把生成的 svg commit 回去

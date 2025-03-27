@@ -47,7 +47,6 @@ jobs:
         run: |
           keymap -c keymap_drawer.config.yaml \
             draw keymap-drawer/eyelash_corne.yaml \
-            -k crkbd \
             > keymap-drawer/eyelash_corne.svg
 
       # 4) (可选) 提交结果回仓库

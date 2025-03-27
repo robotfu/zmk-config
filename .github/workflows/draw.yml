@@ -33,7 +33,7 @@ jobs:
         run: |
           keymap -c "keymap_drawer.config.yaml" parse -z "config/eyelash_corne.keymap" --virtual-layers Combos > "keymap-drawer/eyelash_corne.yaml"
           yq -i '.combos[].l = ["Combos"]' "keymap-drawer/eyelash_corne.yaml"
-          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -l "config/eyelash_corne.json" > "keymap-drawer/eyelash_corne.svg"
+          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -k corne > "keymap-drawer/eyelash_corne.svg"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

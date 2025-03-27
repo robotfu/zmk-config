@@ -1,4 +1,3 @@
-layout_file: "config/eyelash_corne.json"
 draw_config:
   n_columns: 1
   draw_key_sides: true

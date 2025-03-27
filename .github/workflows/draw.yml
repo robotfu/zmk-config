@@ -17,12 +17,8 @@ jobs:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       destination: "commit"
       fail_on_error: "true"
-
-      # 下面这些是你需要加的关键参数
-      keymap_patterns: "config/eyelash_corne.keymap"    # 要解析哪一个 .keymap
-      config_path: "keymap_drawer.config.yaml"          # 配置文件（如果有）
-      output_folder: "keymap-drawer"                    # 解析和生成的文件放哪
-      # 将 combos 收集到 "Combos" 这个虚拟层
+      keymap_patterns: "config/eyelash_corne.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
       parse_args: "eyelash_corne:'--virtual-layers Combos'"
-      # 如果不需要任何 draw_args 就留空或不写
       draw_args: ""

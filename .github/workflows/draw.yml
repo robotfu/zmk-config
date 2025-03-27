@@ -1,61 +1,48 @@
 name: Draw Keymap
-
 on:
   workflow_dispatch:
   push:
     paths:
       - "config/**"
-      - ".github/workflows/draw.yml"
-      - "keymap_drawer.config.yaml"
-      - "keymap-drawer/*.yaml"
+      - .github/workflows/draw.yml
+      - keymap_drawer.config.yaml
+      - keymap-drawer/*.yaml
 
 jobs:
   draw:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      # 1. 检出代码
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      # 2. 安装 Python，方便我们用 pip 安装 keymap-drawer
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: '3.10'
 
-      # 3. 安装 keymap-drawer CLI
-      - name: Install keymap-drawer
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip
           pip install keymap-drawer
+          pip install PyYAML
+          # 安装 mikefarah/yq
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
 
-      # 4. 安装 yq
-      - name: Install yq
+      - name: Parse keymap with virtual Combos layer
         run: |
-          sudo apt-get update
-          sudo apt-get install -y yq
+          echo "正在解析键盘配置并创建虚拟 Combos 层..."
+          keymap -c "keymap_drawer.config.yaml" parse -z "config/eyelash_corne.keymap" --virtual-layers Combos > "keymap-drawer/eyelash_corne.yaml"
+          
+          echo "将所有组合键移至 Combos 层..."
+          yq -i '.combos[].l = ["Combos"]' "keymap-drawer/eyelash_corne.yaml"
+          
+          echo "绘制键盘布局图..."
+          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" > "keymap-drawer/eyelash_corne.svg"
 
-      # 5. Parse -> 修改 combos -> draw
-      - name: Generate combos diagram
-        run: |
-          # parse：加上 --virtual-layers Combos，从 eyelash_corne.keymap 中提取出 combos
-          keymap -c keymap_drawer.config.yaml parse -z config/eyelash_corne.keymap --virtual-layers Combos \
-            > keymap-drawer/eyelash_corne_temp.yaml
-
-          # 用 yq 修改 combos，统一设置它们都在combos.[].l = ["Combos"]' keymap-drawer/eyelash_corne_temp.yaml
-
-          # 再 draw：画出 diagram，输出到 eyelash_corne.svg
-          keymap -c keymap_drawer.config.yaml draw keymap-drawer/eyelash_corne_temp.yaml \
-            -k eyelash_corne \
-            > keymap-drawer/eyelash_corne.svg
-
-      # 6. 可选：把生成的 svg commit 回去
-      - name: Commit diagram
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add keymap-drawer/eyelash_corne.svg
-          # 如果没有变化，这里会返回非零码，所以可以加 --allow-empty
-          git commit -m "chore: update combos diagram"
-          git push
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Draw] ${{ github.event.head_commit.message || '更新键盘布局图，分离组合键显示' }}"
+          file_pattern: keymap-drawer/*

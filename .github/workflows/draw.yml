@@ -4,15 +4,37 @@ on:
   push:
     paths:
       - "config/**"
-      - .github/workflows/draw.yml
-      - keymap_drawer.config.yaml
+      - ".github/workflows/draw.yml"
+      - "keymap_drawer.config.yaml"
+      - "keymap-drawer/*.yaml"
 
 jobs:
-  draw:
+  # 先跑 combos 生成的那一步
+  combos_only:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install keymap-drawer & yq
+        run: |
+          pip install keymap-drawer
+          sudo apt-get update && sudo apt-get install -y yq
+      - name: Combos Only
+        run: |
+          keymap -c "keymap_drawer.config.yaml" parse -z "config/eyelash_corne.keymap" --virtual-layers Combos >"keymap-drawer/base.yaml"
+          yq -Yi '.combos.[].l = ["Combos"]' keymap-drawer/eyelash_corne_combo.yaml
+          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/base.yaml" -j "config/eyelash_corne.json" >"keymap-drawer/eyelash_corne.svg"
+
+  # 再跑 caksoylar/keymap-drawer 的 job，画所有层
+  all_layers:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
     with:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+      fail_on_error: true
+    # 如果想保证先跑 combos 再跑all_layers，那就加个 depends_on:
+    needs: [combos_only]

@@ -1,60 +1,61 @@
-name: Draw Combo Only
+name: Draw Keymap
 
 on:
   workflow_dispatch:
   push:
     paths:
       - "config/**"
-      - "keymap-drawer/**"
       - ".github/workflows/draw.yml"
       - "keymap_drawer.config.yaml"
+      - "keymap-drawer/*.yaml"
 
 jobs:
-  draw-combo-only:
-    # 或者 self-hosted / container
+  draw:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write   # 允许提交到仓库
-
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v3
+      # 1. 检出代码
+      - uses: actions/checkout@v3
 
-      # 你也可以使用 caksoylar/keymap-drawer 提供的 install Action，或者在这里自己安装
-      # 下面做一个示例，假设你想自己手动安装 keymap-drawer 与 yq
-      - name: Install dependencies
+      # 2. 安装 Python，方便我们用 pip 安装 keymap-drawer
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3. 安装 keymap-drawer CLI
+      - name: Install keymap-drawer
         run: |
+          pip install --upgrade pip
           pip install keymap-drawer
+
+      # 4. 安装 yq
+      - name: Install yq
+        run: |
           sudo apt-get update
           sudo apt-get install -y yq
 
-      # 1) 解析：生成带虚拟层 Combos 的 YAML
-      - name: Parse keymap with virtual Combos
+      # 5. Parse -> 修改 combos -> draw
+      - name: Generate combos diagram
         run: |
-          keymap -c keymap_drawer.config.yaml \
-            parse -z config/eyelash_corne.keymap \
-            --virtual-layers Combos \
-            > keymap-drawer/eyelash_corne.yaml
+          # parse：加上 --virtual-layers Combos，从 eyelash_corne.keymap 中提取出 combos
+          keymap -c keymap_drawer.config.yaml parse -z config/eyelash_corne.keymap --virtual-layers Combos \
+            > keymap-drawer/eyelash_corne_temp.yaml
 
-      # 2) 用 yq 把所有 combos 都强制到 ["Combos"] 这一个 layer 上
-      - name: Move all combos to Combos layer
-        run: |
-          yq -Yi '.combos.[].l = ["Combos"]' keymap-drawer/eyelash_corne.yaml
+          # 用 yq 修改 combos，统一设置它们都在combos.[].l = ["Combos"]' keymap-drawer/eyelash_corne_temp.yaml
 
-      # 3) 正式绘制 SVG
-      - name: Draw combos only
-        run: |
-          keymap -c keymap_drawer.config.yaml \
-            draw keymap-drawer/eyelash_corne.yaml \
-            -kb config/eyelash_corne.json \
+          # 再 draw：画出 diagram，输出到 eyelash_corne.svg
+          keymap -c keymap_drawer.config.yaml draw keymap-drawer/eyelash_corne_temp.yaml \
+            -k "corne" \
             > keymap-drawer/eyelash_corne.svg
 
-      # 4) (可选) 提交结果回仓库
-      - name: Commit changes
+      # 6. 可选：把生成的 svg commit 回去
+      - name: Commit diagram
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add keymap-drawer/eyelash_corne.svg
-          git commit -m "chore: update combo-only diagram"
+          # 如果没有变化，这里会返回非零码，所以可以加 --allow-empty
+          git commit -m "chore: update combos diagram"
           git push

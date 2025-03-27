@@ -23,5 +23,3 @@ jobs:
       output_folder: "keymap-drawer"                    # 解析和生成的文件放哪
       # 将 combos 收集到 "Combos" 这个虚拟层
       parse_args: "eyelash_corne:'--virtual-layers Combos'"
-      # 如果不需要任何 draw_args 就留空或不写
-      draw_args: ""

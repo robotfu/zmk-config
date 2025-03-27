@@ -1,42 +1,44 @@
 name: Draw Keymap
+
 on:
-  workflow_dispatch:
   push:
     paths:
-      - "config/**"
-      - .github/workflows/draw.yml
-      - keymap_drawer.config.yaml
-      - keymap-drawer/*.yaml
+      - 'config/eyelash_corne.keymap'
+      - 'config/eyelash_corne.json'  # 当布局文件改变时也触发
+      - 'keymap_drawer.config.yaml'
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   draw:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Set up Python
+      
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-
-      - name: Install dependencies
+          python-version: '3.x'
+          
+      - name: Install keymap-drawer
         run: |
+          python -m pip install --upgrade pip
           pip install keymap-drawer
-          pip install PyYAML
-          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
-          sudo chmod +x /usr/local/bin/yq
-
-      - name: Parse keymap with virtual Combos layer
+      
+      - name: Parse keymap
         run: |
-          keymap -c "keymap_drawer.config.yaml" parse -z "config/eyelash_corne.keymap" --virtual-layers Combos > "keymap-drawer/eyelash_corne.yaml"
-          yq -i '.combos[].l = ["Combos"]' "keymap-drawer/eyelash_corne.yaml"
-          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -k corne > "keymap-drawer/eyelash_corne.svg"
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-          file_pattern: keymap-drawer/*
+          echo "解析键映射文件..."
+          keymap -c "keymap_drawer.config.yaml" parse "config/eyelash_corne.keymap" > "keymap-drawer/eyelash_corne.yaml"
+          
+      - name: Generate keymap SVG
+        run: |
+          echo "绘制键盘布局图..."
+          keymap -c "keymap_drawer.config.yaml" draw "keymap-drawer/eyelash_corne.yaml" -l "config/eyelash_corne.json" > "keymap-drawer/eyelash_corne.svg"
+      
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add keymap-drawer/eyelash_corne.yaml
+          git add keymap-drawer/eyelash_corne.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update keyboard layout files" && git push)

@@ -211,6 +211,11 @@
             bindings = <&kp N2>;
             key-positions = <38 39>;
         };
+
+        n3 {
+            bindings = <&kp N3>;
+            key-positions = <39 40>;
+        };
     };
 
     keymap {

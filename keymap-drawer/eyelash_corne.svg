@@ -2643,6 +2643,16 @@ rect.held, rect.combo.held {
 <text x="756" y="87" class="combo tap">4</text>
 <text x="756" y="76" class="combo shifted">$</text>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="798" y="74" width="28" height="26" class="combo"/>
+<text x="812" y="87" class="combo tap">5</text>
+<text x="812" y="76" class="combo shifted">%</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="854" y="85" width="28" height="26" class="combo"/>
+<text x="868" y="98" class="combo tap">6</text>
+<text x="868" y="87" class="combo shifted">^</text>
+</g>
 </g>
 </g>
 </svg>

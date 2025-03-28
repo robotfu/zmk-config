@@ -2623,6 +2623,16 @@ rect.held, rect.combo.held {
 <tspan x="280" dy="-0.6em" style="font-size: 67%">&amp;nav_word</tspan><tspan x="280" dy="1.2em" style="font-size: 67%">1</tspan>
 </text>
 </g>
+<g class="combo combopos-13">
+<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
+<text x="756" y="143" class="combo tap">1</text>
+<text x="756" y="132" class="combo shifted">!</text>
+</g>
+<g class="combo combopos-14">
+<rect rx="6" ry="6" x="798" y="130" width="28" height="26" class="combo"/>
+<text x="812" y="143" class="combo tap">2</text>
+<text x="812" y="132" class="combo shifted">@</text>
+</g>
 </g>
 </g>
 </svg>

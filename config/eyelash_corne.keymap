@@ -114,6 +114,12 @@
         tap-ms = <30>;
     };
 
+    leader1: leader1 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            usb { sequence = <P R>; bindings = <&kp PRINTSCREEN>; };
+        };
+
     combos {
         compatible = "zmk,combos";
 

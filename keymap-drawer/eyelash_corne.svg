@@ -2633,6 +2633,11 @@ rect.held, rect.combo.held {
 <text x="812" y="143" class="combo tap">2</text>
 <text x="812" y="132" class="combo shifted">@</text>
 </g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="854" y="141" width="28" height="26" class="combo"/>
+<text x="868" y="154" class="combo tap">3</text>
+<text x="868" y="143" class="combo shifted">#</text>
+</g>
 </g>
 </g>
 </svg>

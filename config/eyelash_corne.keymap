@@ -201,6 +201,16 @@
             bindings = <&nav_word 1>;
             key-positions = <33 32>;
         };
+
+        n1 {
+            bindings = <&kp N1>;
+            key-positions = <37 38>;
+        };
+
+        n2 {
+            bindings = <&kp N2>;
+            key-positions = <38 39>;
+        };
     };
 
     keymap {

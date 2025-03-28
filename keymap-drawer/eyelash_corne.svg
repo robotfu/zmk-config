@@ -2614,6 +2614,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
 <text x="56" y="161" class="combo tap">Ctl+A</text>
 </g>
+<g class="combo combopos-12">
+<rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
+<text x="280" y="150" class="combo tap"><tspan style="font-size: 67%">&amp;nav_word</tspan></text>
+</g>
 </g>
 </g>
 </svg>

@@ -221,6 +221,16 @@
             bindings = <&kp N4>;
             key-positions = <23 24>;
         };
+
+        n5 {
+            bindings = <&kp N5>;
+            key-positions = <24 25>;
+        };
+
+        n6 {
+            bindings = <&kp N6>;
+            key-positions = <25 26>;
+        };
     };
 
     keymap {

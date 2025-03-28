@@ -196,6 +196,11 @@
             bindings = <&kp LC(A)>;
             key-positions = <28 29>;
         };
+
+        nav_word {
+            bindings = <&nav_word>;
+            key-positions = <33 32>;
+        };
     };
 
     keymap {

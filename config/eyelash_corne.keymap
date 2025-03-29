@@ -250,42 +250,42 @@
         };
 
         n3 {
-            bindings = <&none>;
+            bindings = <&kp N3>;
             key-positions = <32 46>;
         };
 
         n4 {
-            bindings = <&none>;
+            bindings = <&kp N4>;
             key-positions = <15 46>;
         };
 
         n5 {
-            bindings = <&none>;
+            bindings = <&kp N5>;
             key-positions = <46 16>;
         };
 
         n6 {
-            bindings = <&none>;
+            bindings = <&kp N6>;
             key-positions = <46 17>;
         };
 
         n7 {
-            bindings = <&none>;
+            bindings = <&kp N7>;
             key-positions = <46 2>;
         };
 
         n8 {
-            bindings = <&none>;
+            bindings = <&kp N8>;
             key-positions = <46 3>;
         };
 
         n9 {
-            bindings = <&none>;
+            bindings = <&kp N9>;
             key-positions = <4 46>;
         };
 
         n0 {
-            bindings = <&none>;
+            bindings = <&kp N0>;
             key-positions = <43 46>;
         };
     };

@@ -80,55 +80,5 @@
             bindings = <&urob__auto_layer_media 3>;
             key-positions = <16 31>;
         };
-
-        n1 {
-            bindings = <&kp N1>;
-            key-positions = <46 30>;
-        };
-
-        n2 {
-            bindings = <&kp N2>;
-            key-positions = <31 46>;
-        };
-
-        n3 {
-            bindings = <&kp N3>;
-            key-positions = <32 46>;
-        };
-
-        n4 {
-            bindings = <&kp N4>;
-            key-positions = <15 46>;
-        };
-
-        n5 {
-            bindings = <&kp N5>;
-            key-positions = <46 16>;
-        };
-
-        n6 {
-            bindings = <&kp N6>;
-            key-positions = <46 17>;
-        };
-
-        n7 {
-            bindings = <&kp N7>;
-            key-positions = <46 2>;
-        };
-
-        n8 {
-            bindings = <&kp N8>;
-            key-positions = <46 3>;
-        };
-
-        n9 {
-            bindings = <&kp N9>;
-            key-positions = <4 46>;
-        };
-
-        n0 {
-            bindings = <&kp N0>;
-            key-positions = <43 46>;
-        };
     };
 };

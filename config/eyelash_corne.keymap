@@ -37,7 +37,7 @@
 
 / {
     behaviors {
-    eye__td0: eye__td0 {
+        eye__td0: eye__td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
@@ -147,7 +147,7 @@
             bindings = <&urob__auto_layer_nav>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
         };
 
         tap_hold__num: tap_hold__num {
@@ -155,7 +155,7 @@
             bindings = <&urob__auto_layer_num>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
         };
 
         tap_hold__sym: tap_hold__sym {
@@ -163,7 +163,7 @@
             bindings = <&urob__auto_layer_sym>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
         };
 
         tap_hold__media: tap_hold__media {
@@ -171,7 +171,7 @@
             bindings = <&urob__auto_layer_sym>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
         };
 
         tap_hold__fun: tap_hold__fun {
@@ -179,7 +179,7 @@
             bindings = <&urob__auto_layer_sym>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
         };
     };
 
@@ -197,7 +197,7 @@
         tap-ms = <30>;
     };
 
-        combos {
+    combos {
         compatible = "zmk,combos";
 
         copy {
@@ -258,22 +258,18 @@
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;
         // };
-
         // num_auto_layer-combo {
         //     bindings = <&urob__auto_layer_num 4>;
         //     key-positions = <36 22>;
         // };
-
         // sym_auto_layer-combo {
         //     bindings = <&urob__auto_layer_sym 5>;
         //     key-positions = <23 37>;
         // };
-
         // fun_auto_layer-combo {
         //     bindings = <&urob__auto_layer_fun 6>;
         //     key-positions = <38 24>;
         // };
-
         // med_auto_layer-combo {
         //     bindings = <&urob__auto_layer_media 3>;
         //     key-positions = <16 31>;

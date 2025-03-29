@@ -207,7 +207,7 @@
 &kp GRAVE         &kp Q                   &kp W                   &kp E                    &kp R                    &kp T                         &kp PG_UP           &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
 &ssp__colon_semi  &ssp__urob__hml LWIN A  &ssp__urob__hml LALT S  &ssp__urob__hml LCTRL D  &ssp__urob__hml LSHFT F  &kp G               &kp HOME  &tog 7     &kp END  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
 &urob__leader_1   &kp Z                   &kp X                   &kp C                    &kp V                    &kp B      &to 0              &kp PG_DN           &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
-                                                                  &lt 3 ESC                &tap_hold__nav 0 SPACE   &lt 2 TAB                                         &lt 5 ENTER  &lt 4 BACKSPACE          &lt 6 DELETE
+                                                                  &lt 3 ESC                &tap_hold__nav 1 SPACE   &lt 2 TAB                                         &lt 5 ENTER  &lt 4 BACKSPACE          &lt 6 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;

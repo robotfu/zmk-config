@@ -1,0 +1,134 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <30 31>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <31 32>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <30 32>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <29 30>;
+        };
+
+        ctrly {
+            bindings = <&kp LC(Y)>;
+            key-positions = <29 32>;
+        };
+
+        lb {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <37 38>;
+        };
+
+        rb {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <38 39>;
+        };
+
+        lplt {
+            bindings = <&ssp__left_paren_lt>;
+            key-positions = <23 24>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+        };
+
+        rplt {
+            bindings = <&ssp__right_paren_gt>;
+            key-positions = <24 25>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+        };
+
+        lbootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 28>;
+        };
+
+        nav_auto_layer-combo {
+            bindings = <&urob__auto_layer_nav 1>;
+            key-positions = <33 18>;
+        };
+
+        num_auto_layer-combo {
+            bindings = <&urob__auto_layer_num 4>;
+            key-positions = <36 22>;
+        };
+
+        sym_auto_layer-combo {
+            bindings = <&urob__auto_layer_sym 5>;
+            key-positions = <23 37>;
+        };
+
+        fun_auto_layer-combo {
+            bindings = <&urob__auto_layer_fun 6>;
+            key-positions = <38 24>;
+        };
+
+        med_auto_layer-combo {
+            bindings = <&urob__auto_layer_media 3>;
+            key-positions = <16 31>;
+        };
+
+        n1 {
+            bindings = <&kp N1>;
+            key-positions = <46 30>;
+        };
+
+        n2 {
+            bindings = <&kp N2>;
+            key-positions = <31 46>;
+        };
+
+        n3 {
+            bindings = <&kp N3>;
+            key-positions = <32 46>;
+        };
+
+        n4 {
+            bindings = <&kp N4>;
+            key-positions = <15 46>;
+        };
+
+        n5 {
+            bindings = <&kp N5>;
+            key-positions = <46 16>;
+        };
+
+        n6 {
+            bindings = <&kp N6>;
+            key-positions = <46 17>;
+        };
+
+        n7 {
+            bindings = <&kp N7>;
+            key-positions = <46 2>;
+        };
+
+        n8 {
+            bindings = <&kp N8>;
+            key-positions = <46 3>;
+        };
+
+        n9 {
+            bindings = <&kp N9>;
+            key-positions = <4 46>;
+        };
+
+        n0 {
+            bindings = <&kp N0>;
+            key-positions = <43 46>;
+        };
+    };
+};

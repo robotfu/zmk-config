@@ -238,6 +238,56 @@
             bindings = <&urob__auto_layer_media 3>;
             key-positions = <16 31>;
         };
+
+        n1 {
+            bindings = <&kp N1>;
+            key-positions = <46 30>;
+        };
+
+        n2 {
+            bindings = <&kp N2>;
+            key-positions = <31 46>;
+        };
+
+        n3 {
+            bindings = <&none>;
+            key-positions = <32 46>;
+        };
+
+        n4 {
+            bindings = <&none>;
+            key-positions = <15 46>;
+        };
+
+        n5 {
+            bindings = <&none>;
+            key-positions = <46 16>;
+        };
+
+        n6 {
+            bindings = <&none>;
+            key-positions = <46 17>;
+        };
+
+        n7 {
+            bindings = <&none>;
+            key-positions = <46 2>;
+        };
+
+        n8 {
+            bindings = <&none>;
+            key-positions = <46 3>;
+        };
+
+        n9 {
+            bindings = <&none>;
+            key-positions = <4 46>;
+        };
+
+        n0 {
+            bindings = <&none>;
+            key-positions = <43 46>;
+        };
     };
 
     keymap {

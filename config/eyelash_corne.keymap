@@ -228,7 +228,7 @@
         };
 
         num_auto_layer-combo {
-            bindings = <&num_auto_layer>;
+            bindings = <&num_auto_layer 4>;
             key-positions = <36 22>;
         };
     };

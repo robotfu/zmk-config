@@ -225,17 +225,17 @@
         };
 
         sym_auto_layer-combo {
-            bindings = <&urob__auto_layer_sym>;
+            bindings = <&urob__auto_layer_sym 5>;
             key-positions = <23 37>;
         };
 
         fun_auto_layer-combo {
-            bindings = <&urob__auto_layer_fun>;
+            bindings = <&urob__auto_layer_fun 6>;
             key-positions = <38 24>;
         };
 
         med_auto_layer-combo {
-            bindings = <&urob__auto_layer_media>;
+            bindings = <&urob__auto_layer_media 3>;
             key-positions = <16 31>;
         };
     };

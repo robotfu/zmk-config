@@ -233,6 +233,21 @@
             bindings = <&urob__auto_layer_num 4>;
             key-positions = <36 22>;
         };
+
+        sym_auto_layer-combo {
+            bindings = <&urob__auto_layer_sym>;
+            key-positions = <23 37>;
+        };
+
+        fun_auto_layer-combo {
+            bindings = <&urob__auto_layer_fun>;
+            key-positions = <38 24>;
+        };
+
+        med_auto_layer-combo {
+            bindings = <&urob__auto_layer_media>;
+            key-positions = <16 31>;
+        };
     };
 
     keymap {

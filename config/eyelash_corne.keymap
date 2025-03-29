@@ -268,10 +268,10 @@
 
         lr {
             bindings = <
-&none  &none     &none     &none      &none      &none                  &none         &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none     &none     &none      &none      &none  &to 0           &none         &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                           &none      &none      &none                                &mkp RCLK  &mkp LCLK       &mkp MCLK
+&trans  &trans    &trans    &trans     &trans     &trans                   &trans          &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans           &trans  &trans  &trans  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &to 0            &trans          &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                            &trans     &trans     &trans                                   &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
             label = "mouse";
@@ -279,10 +279,10 @@
 
         ll {
             bindings = <
-&none  &none     &none     &none      &none      &none                  &none         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none           &none  &none  &none  &none            &kp C_PREVIOUS    &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
-&none  &none     &none     &none      &none      &none  &to 0           &none         &none            &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
-                           &none      &none      &none                                &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE
+&trans  &trans    &trans    &trans     &trans     &trans                   &trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans           &trans  &trans  &trans  &trans           &kp C_PREVIOUS    &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
+&trans  &trans    &trans    &trans     &trans     &trans  &to 0            &trans          &trans           &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
+                            &trans     &trans     &trans                                   &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE
             >;
 
             label = "media";
@@ -290,10 +290,10 @@
 
         rm {
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT                   &none         &none  &none      &none      &none     &none     &none
-&none  &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL           &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp BSLH   &to 0           &none         &none  &none      &none      &none     &none     &none
-                          &kp PERIOD  &kp N0  &kp MINUS                                &none  &none      &none
+&trans  &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT                    &trans          &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL           &trans  &trans  &trans  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp BSLH   &to 0            &trans          &trans  &trans     &trans     &trans    &trans    &trans
+                           &kp PERIOD  &kp N0  &kp MINUS                                   &trans  &trans     &trans
             >;
 
             label = "num";
@@ -302,10 +302,10 @@
 
         rl {
             bindings = <
-&none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE                  &none         &none  &none      &none      &none     &none     &none
-&none  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS                  &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE         &to 0           &none         &none  &none      &none      &none     &none     &none
-                                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                                 &none  &none      &none
+&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE                   &trans          &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS                  &trans  &trans  &trans  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE         &to 0            &trans          &trans  &trans     &trans     &trans    &trans    &trans
+                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                                    &trans  &trans     &trans
             >;
 
             label = "sym";
@@ -313,10 +313,10 @@
 
         rr {
             bindings = <
-&none  &kp F12  &kp F7  &kp F8      &kp F9     &kp PSCRN                        &none         &none  &none      &none      &none     &none     &none
-&none  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK            &none  &none  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp F10  &kp F1  &kp F2      &kp F3     &kp PAUSE_BREAK  &to 0           &none         &none  &none      &none      &none     &none     &none
-                        &kp C_MENU  &kp SPACE  &kp TAB                                        &none  &none      &none
+&trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PSCRN                         &trans          &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK            &trans  &trans  &trans  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2      &kp F3     &kp PAUSE_BREAK  &to 0            &trans          &trans  &trans     &trans     &trans    &trans    &trans
+                         &kp C_MENU  &kp SPACE  &kp TAB                                           &trans  &trans     &trans
             >;
 
             label = "fun";

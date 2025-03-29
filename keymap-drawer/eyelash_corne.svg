@@ -2629,6 +2629,18 @@ rect.held, rect.combo.held {
 <tspan x="672" dy="-0.6em" style="font-size: 60%">&amp;urob__au…</tspan><tspan x="672" dy="1.2em" style="font-size: 60%">4</tspan>
 </text>
 </g>
+<g class="combo combopos-14">
+<rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
+<text x="728" y="119" class="combo tap"><tspan style="font-size: 60%">&amp;urob__au…</tspan></text>
+</g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<text x="784" y="112" class="combo tap"><tspan style="font-size: 60%">&amp;urob__au…</tspan></text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
+<text x="196" y="112" class="combo tap"><tspan style="font-size: 60%">&amp;urob__au…</tspan></text>
+</g>
 </g>
 </g>
 </svg>

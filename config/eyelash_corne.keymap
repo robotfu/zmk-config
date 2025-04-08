@@ -106,10 +106,26 @@
                 bindings = <&to 3>;
             };
 
-            f1 {
-                sequence = <F>;
-                bindings = <&tog 6>;
+            stickwin {
+                sequence = <A>;
+                bindings = <&sk LEFT_WIN>;
             };
+
+            stickalt {
+                sequence = <S>;
+                bindings = <&sk LEFT_ALT>;
+            };
+
+            stickctl {
+                sequence = <D>;
+                bindings = <&sk LEFT_CTRL>;
+            };
+
+            sticksft {
+                sequence = <F>;
+                bindings = <&sk LEFT_SHIFT>;
+            };
+
         };
 
         urob__auto_layer_nav: urob__auto_layer_nav {

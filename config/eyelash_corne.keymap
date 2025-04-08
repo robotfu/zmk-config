@@ -107,8 +107,8 @@
             };
 
             ctl {
-                sequence = <D>;
-                bindings = <&sk LCTRL>;
+                sequence = <D D>;
+                bindings = <&kp LCTRL>;
             };
         };
 

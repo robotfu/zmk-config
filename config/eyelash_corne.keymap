@@ -106,7 +106,7 @@
                 bindings = <&to 3>;
             };
 
-            win {
+            sw {
                 sequence = <G A>;
                 bindings = <&sk LWIN>;
             };

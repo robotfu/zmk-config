@@ -73,7 +73,7 @@
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LSFT)>;
         };
 
         ssp__right_paren_gt: ssp__right_paren_gt {
@@ -81,7 +81,7 @@
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LSFT)>;
         };
 
         ssp__colon_semi: ssp__colon_semi {
@@ -89,7 +89,7 @@
             bindings = <&kp COLON>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LSFT)>;
         };
 
         urob__leader_1: urob__leader_1 {
@@ -107,22 +107,22 @@
             };
 
             stickwin {
-                sequence = <A>;
+                sequence = <A A>;
                 bindings = <&sk LEFT_WIN>;
             };
 
             stickalt {
-                sequence = <S>;
+                sequence = <S S>;
                 bindings = <&sk LEFT_ALT>;
             };
 
             stickctl {
-                sequence = <D>;
+                sequence = <D D>;
                 bindings = <&sk LEFT_CTRL>;
             };
 
             sticksft {
-                sequence = <F>;
+                sequence = <F F>;
                 bindings = <&sk LEFT_SHIFT>;
             };
 

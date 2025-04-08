@@ -126,7 +126,7 @@
                 bindings = <&sk LSHFT>;
             };
 
-            skf {
+            fun {
                 sequence = <G>;
                 bindings = <&to 6>;
             };

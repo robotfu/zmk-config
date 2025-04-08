@@ -106,9 +106,29 @@
                 bindings = <&to 3>;
             };
 
-            sw {
+            skw {
                 sequence = <A>;
-                bindings = <&sk LWIN>;
+                bindings = <&sk LGUI>;
+            };
+
+            ska {
+                sequence = <S>;
+                bindings = <&sk LALT>;
+            };
+
+            skc {
+                sequence = <D>;
+                bindings = <&sk LCTRL>;
+            };
+
+            sks {
+                sequence = <F>;
+                bindings = <&sk LSHFT>;
+            };
+
+            skf {
+                sequence = <G>;
+                bindings = <&to 6>;
             };
         };
 

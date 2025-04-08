@@ -105,6 +105,11 @@
                 sequence = <M E>;
                 bindings = <&to 3>;
             };
+
+            ctl {
+                sequence = <D>;
+                bindings = <&sk LCTRL>;
+            };
         };
 
         urob__auto_layer_nav: urob__auto_layer_nav {

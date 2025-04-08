@@ -105,27 +105,6 @@
                 sequence = <M E>;
                 bindings = <&to 3>;
             };
-
-            // stickwin {
-            //     sequence = <A A>;
-            //     bindings = <&sk LGUI>;
-            // };
-
-            // stickalt {
-            //     sequence = <S S>;
-            //     bindings = <&sk LALT>;
-            // };
-
-            // stickctl {
-            //     sequence = <D D>;
-            //     bindings = <&sk LCTRL>;
-            // };
-
-            // sticksft {
-            //     sequence = <F F>;
-            //     bindings = <&sk LSHFT>;
-            // };
-
         };
 
         urob__auto_layer_nav: urob__auto_layer_nav {

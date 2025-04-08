@@ -108,22 +108,22 @@
 
             stickwin {
                 sequence = <A A>;
-                bindings = <&sk LEFT_WIN>;
+                bindings = <&sk LGUI>;
             };
 
             stickalt {
                 sequence = <S S>;
-                bindings = <&sk LEFT_ALT>;
+                bindings = <&sk LALT>;
             };
 
             stickctl {
                 sequence = <D D>;
-                bindings = <&sk LEFT_CTRL>;
+                bindings = <&sk LCTRL>;
             };
 
             sticksft {
                 sequence = <F F>;
-                bindings = <&sk LEFT_SHIFT>;
+                bindings = <&sk LSHFT>;
             };
 
         };

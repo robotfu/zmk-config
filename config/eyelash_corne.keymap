@@ -107,7 +107,7 @@
             };
 
             sw {
-                sequence = <G A>;
+                sequence = <A>;
                 bindings = <&sk LWIN>;
             };
         };

@@ -197,7 +197,7 @@
         };
 
         win_alt_ctl {
-            bindings = <&kp LG(LA(LCTRL))>;
+            bindings = <&sk LG(LA(LCTRL))>;
             key-positions = <29 30 31>;
         };
 

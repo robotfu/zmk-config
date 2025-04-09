@@ -299,6 +299,9 @@ combos {
     // };
 };
 
+behaviors {
+};
+
 keymap {
     compatible = "zmk,keymap";
 
@@ -396,7 +399,7 @@ keymap {
         bindings = <
 &kp EQUAL  &kp P                        &kp O                           &kp I                          &kp U                      &kp Y                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &kp MINUS  &ssp__urob__hmr LGUI SQT     &ssp__urob__hmr LALT L          &ssp__urob__hmr LCTRL K        &ssp__urob__hmr LSHFT J    &kp H             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH   &ssp__sk_hold_tap LWIN FSLH  &ssp__sk_hold_tap LEFT_ALT DOT  &ssp__sk_hold_tap LCTRL COMMA  &ssp__sk_hold_tap LSHFT M  &kp N    &to 8            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH   &ssp__sk_hold_tap LWIN FSLH  &ssp__sk_hold_tap LEFT_ALT DOT  &ssp__sk_hold_tap LCTRL COMMA  &ssp__sk_hold_tap LSHFT M  &kp N    &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                                                         &kp DEL                        &kp BSPC                   &kp RET                                   &trans  &trans  &trans
         >;
 

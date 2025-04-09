@@ -206,6 +206,11 @@
             key-positions = <30 31>;
         };
 
+        win_alt {
+            bindings = <&sk LG(LEFT_ALT)>;
+            key-positions = <29 30>;
+        };
+
         lb {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <37 38>;
@@ -233,11 +238,6 @@
         lbootloader {
             bindings = <&bootloader>;
             key-positions = <0 28>;
-        };
-
-        win_alt {
-            bindings = <&sk LG(LEFT_ALT)>;
-            key-positions = <29 30>;
         };
 
         // nav_auto_layer-combo {

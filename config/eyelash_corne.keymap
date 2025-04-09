@@ -25,9 +25,17 @@
     trigger-period-ms = <16>;
 };
 
+// &lt {
+//     flavor = "hold-preferred";
+//     quick-tap-ms = <150>;
+// };
+
 &lt {
-    flavor = "hold-preferred";
-    quick-tap-ms = <150>;
+    tapping-term-ms = <170>;
+    flavor = "tap-unless-interrupted";
+    require-prior-idle-ms = <170>;
+    hold-trigger-key-positions = <>;
+    quick-tap-ms = <145>;
 };
 
 &mt {

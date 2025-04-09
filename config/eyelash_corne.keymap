@@ -181,6 +181,26 @@
     combos {
         compatible = "zmk,combos";
 
+        win {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <29>;
+        };
+
+        alt {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <30>;
+        };
+
+        ctl {
+            bindings = <&sk LEFT_CTRL>;
+            key-positions = <31>;
+        };
+
+        sft {
+            bindings = <&sk LSHFT>;
+            key-positions = <32>;
+        };
+
         win_alt {
             bindings = <&sk LG(LEFT_ALT)>;
             key-positions = <29 30>;

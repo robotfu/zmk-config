@@ -357,10 +357,10 @@
 
         left {
             bindings = <
-&kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                      &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH   &kp FSLH                  &kp DOT                 &kp COMMA                &kp M                    &kp N    &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                             &kp DEL                  &kp BSPC                 &kp RET                                    &trans  &trans  &trans
+&kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH   &kp FSLH                  &kp DOT                 &kp COMMA                &kp M                    &kp N    &to 8            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                             &kp DEL                  &kp BSPC                 &kp RET                                   &trans  &trans  &trans
             >;
 
             label = "left_hand";

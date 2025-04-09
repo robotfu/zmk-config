@@ -132,6 +132,15 @@
             };
         };
 
+        ssp__sk_hold_tap: sk_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&sk>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
         // urob__auto_layer_nav: urob__auto_layer_nav {
         //     compatible = "zmk,behavior-auto-layer";
         //     #binding-cells = <1>;
@@ -293,10 +302,10 @@
         m0 {
             display-name = "home";
             bindings = <
-&kp GRAVE         &kp Q                   &kp W                   &kp E                    &kp R                    &kp T                         &kp UP_ARROW             &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
-&ssp__colon_semi  &ssp__urob__hml LWIN A  &ssp__urob__hml LALT S  &ssp__urob__hml LCTRL D  &ssp__urob__hml LSHFT F  &kp G               &kp LEFT  &tog 7        &kp RIGHT  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
-&urob__leader_1   &kp Z                   &kp X                   &kp C                    &kp V                    &kp B      &to 8              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
-                                                                  &lt 3 ESCAPE             &lt 1 SPACE              &lt 2 TAB                                              &lt 5 ENTER  &lt 4 BACKSPACE          &lt 6 DELETE
+&kp GRAVE         &kp Q                     &kp W                         &kp E                      &kp R                      &kp T                         &kp UP_ARROW             &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
+&ssp__colon_semi  &ssp__urob__hml LWIN A    &ssp__urob__hml LALT S        &ssp__urob__hml LCTRL D    &ssp__urob__hml LSHFT F    &kp G               &kp LEFT  &tog 7        &kp RIGHT  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
+&urob__leader_1   &ssp__sk_hold_tap LWIN Z  &ssp__sk_hold_tap LEFT_ALT X  &ssp__sk_hold_tap C LCTRL  &ssp__sk_hold_tap LSHFT V  &kp B      &to 8              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
+                                                                          &lt 3 ESCAPE               &lt 1 SPACE                &lt 2 TAB                                              &lt 5 ENTER  &lt 4 BACKSPACE          &lt 6 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;

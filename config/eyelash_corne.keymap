@@ -182,22 +182,22 @@
         compatible = "zmk,combos";
 
         win {
-            bindings = <&sk LEFT_GUI>;
+            bindings = <&sk LGUI>;
             key-positions = <29>;
         };
 
         alt {
-            bindings = <&sk LEFT_ALT>;
+            bindings = <&sk LALT>;
             key-positions = <30>;
         };
 
         ctl {
-            bindings = <&sk LEFT_CTRL>;
+            bindings = <&sk LCTRL>;
             key-positions = <31>;
         };
 
         sft {
-            bindings = <&sk LSHFT>;
+            bindings = <&sk LSHIFT>;
             key-positions = <32>;
         };
 

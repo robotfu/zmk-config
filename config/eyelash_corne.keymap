@@ -304,7 +304,7 @@
             bindings = <
 &kp GRAVE         &kp Q                     &kp W                         &kp E                      &kp R                      &kp T                         &kp UP_ARROW             &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
 &ssp__colon_semi  &ssp__urob__hml LWIN A    &ssp__urob__hml LALT S        &ssp__urob__hml LCTRL D    &ssp__urob__hml LSHFT F    &kp G               &kp LEFT  &tog 7        &kp RIGHT  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
-&urob__leader_1   &ssp__sk_hold_tap LWIN Z  &ssp__sk_hold_tap LEFT_ALT X  &ssp__sk_hold_tap C LCTRL  &ssp__sk_hold_tap LSHFT V  &kp B      &to 8              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
+&urob__leader_1   &ssp__sk_hold_tap LWIN Z  &ssp__sk_hold_tap LEFT_ALT X  &ssp__sk_hold_tap LCTRL C  &ssp__sk_hold_tap LSHFT V  &kp B      &to 8              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
                                                                           &lt 3 ESCAPE               &lt 1 SPACE                &lt 2 TAB                                              &lt 5 ENTER  &lt 4 BACKSPACE          &lt 6 DELETE
             >;
 
@@ -393,7 +393,7 @@
             bindings = <
 &kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH   &kp FSLH                  &kp DOT                 &kp COMMA                &kp M                    &kp N    &to 8            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH   &ssp__sk_hold_tap LWIN FSLH                  &ssp__sk_hold_tap LEFT_ALT DOT                 &ssp__sk_hold_tap LCTRL COMMA                &ssp__sk_hold_tap LSHFT M                    &kp N    &to 8            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                                              &kp DEL                  &kp BSPC                 &kp RET                                   &trans  &trans  &trans
             >;
 

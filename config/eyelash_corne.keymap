@@ -35,8 +35,6 @@
     require-prior-idle-ms = <125>;
 };
 
-};
-
 / {
 
 behaviors {

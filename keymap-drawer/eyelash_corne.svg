@@ -2861,9 +2861,7 @@ rect.held, rect.combo.held {
 <path d="M140,150 l-38,7" class="combo"/>
 <path d="M140,150 l38,-7" class="combo"/>
 <rect rx="6" ry="6" x="126" y="137" width="28" height="26" class="combo"/>
-<text x="140" y="150" class="combo tap">
-<tspan x="140" dy="-0.6em" style="font-size: 75%">Gui+LEFT</tspan><tspan x="140" dy="1.2em" style="font-size: 75%">CTRL</tspan>
-</text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="131" y="141" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-control"/>
 <use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="132" y="146" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-2">

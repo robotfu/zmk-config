@@ -216,6 +216,26 @@
             key-positions = <29 30 31 32>;
         };
 
+        alt_ctl {
+            bindings = <&sk (LA(LCTRL))>;
+            key-positions = <30 31>;
+        };
+
+        alt_sft {
+            bindings = <&sk (LA(LSHFT))>;
+            key-positions = <30 32>;
+        };
+
+        alt_ctl_sft {
+            bindings = <&sk (LA(LC(LSHFT)))>;
+            key-positions = <30 31 32>;
+        };
+
+        ctl_sft {
+            bindings = <&sk (LC(LSHFT))>;
+            key-positions = <31 32>;
+        };
+
         lb {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <37 38>;

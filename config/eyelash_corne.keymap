@@ -187,7 +187,7 @@
         };
 
         win_ctl {
-            bindings = <&sk LG(LEFT_CTRL)>;
+            bindings = <&sk LG(LCTRL)>;
             key-positions = <29 31>;
         };
 

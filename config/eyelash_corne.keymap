@@ -342,6 +342,8 @@
 &trans  &trans  &kp PG_UP  &trans      &kp PG_DN  &kp INS    &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                            &kp DELETE  &kp BSPC   &kp ENTER                                   &trans  &trans  &trans
             >;
+
+            label = "l_nav";
         };
     };
 

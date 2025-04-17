@@ -256,6 +256,16 @@
             key-positions = <17 18>;
         };
 
+        to_left {
+            bindings = <&to 1>;
+            key-positions = <16 17>;
+        };
+
+        leader {
+            bindings = <&urob__leader_1>;
+            key-positions = <14 15>;
+        };
+
         // nav_auto_layer-combo {
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;

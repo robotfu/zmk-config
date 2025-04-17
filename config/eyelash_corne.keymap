@@ -39,12 +39,14 @@
 
 / {
     behaviors {
-        // eye__td0: eye__td0 {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     display-name = "Shift/Caps Lock Tap Dance";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        // };
+
+        kt_off: key_toggle_off_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle Off";
+            toggle-mode = "off";
+        };
+
 
         ssp__urob__hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -145,26 +147,22 @@
 
             winoff {
                 sequence = <A>;
-                bindings = <&kt LWIN>;
-                toggle-mode = "off";
+                bindings = <&kt_off LWIN>;
             };
 
             altoff {
                 sequence = <S>;
-                bindings = <&kt LALT>;
-                toggle-mode = "off";
+                bindings = <&kt_off LALT>;
             };
 
             ctloff {
                 sequence = <D>;
-                bindings = <&kt LCTRL>;
-                toggle-mode = "off";
+                bindings = <&kt_off LCTRL>;
             };
 
             sftoff {
                 sequence = <F>;
-                bindings = <&kt LSHFT>;
-                toggle-mode = "off";
+                bindings = <&kt_off LSHFT>;
             };
         };
 

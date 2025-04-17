@@ -251,6 +251,11 @@
             key-positions = <28 29>;
         };
 
+        fun {
+            bindings = <&to 7>;
+            key-positions = <17 18>;
+        };
+
         // nav_auto_layer-combo {
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;

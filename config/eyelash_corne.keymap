@@ -253,6 +253,56 @@
             key-positions = <13 28>;
         };
 
+        sn1 {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 14>;
+        };
+
+        sn2 {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <2 15>;
+        };
+
+        sn3 {
+            bindings = <&kp HASH>;
+            key-positions = <3 16>;
+        };
+
+        sn4 {
+            bindings = <&kp DOLLAR>;
+            key-positions = <4 17>;
+        };
+
+        sn5 {
+            bindings = <&kp PERCENT>;
+            key-positions = <5 18>;
+        };
+
+        sn6 {
+            bindings = <&kp CARET>;
+            key-positions = <14 29>;
+        };
+
+        sn7 {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <15 30>;
+        };
+
+        sn8 {
+            bindings = <&kp ASTERISK>;
+            key-positions = <16 31>;
+        };
+
+        sn9 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <17 32>;
+        };
+
+        sn0 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <18 33>;
+        };
+
         // nav_auto_layer-combo {
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;

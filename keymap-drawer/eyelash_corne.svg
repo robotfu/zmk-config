@@ -3157,6 +3157,46 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="14" y="120" width="28" height="26" class="combo bootloader"/>
 <use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="19" y="124" height="18" width="18.0" class="combo bootloader tap glyph mdi:backup-restore"/>
 </g>
+<g class="combo combopos-11">
+<rect rx="6" ry="6" x="70" y="64" width="28" height="26" class="combo"/>
+<text x="84" y="77" class="combo tap">!</text>
+</g>
+<g class="combo combopos-12">
+<rect rx="6" ry="6" x="126" y="50" width="28" height="26" class="combo"/>
+<text x="140" y="63" class="combo tap">@</text>
+</g>
+<g class="combo combopos-13">
+<rect rx="6" ry="6" x="182" y="43" width="28" height="26" class="combo"/>
+<text x="196" y="56" class="combo tap">#</text>
+</g>
+<g class="combo combopos-14">
+<rect rx="6" ry="6" x="238" y="50" width="28" height="26" class="combo"/>
+<text x="252" y="63" class="combo tap">$</text>
+</g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="294" y="56" width="28" height="26" class="combo"/>
+<text x="308" y="69" class="combo tap">%</text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="70" y="120" width="28" height="26" class="combo"/>
+<text x="84" y="133" class="combo tap">^</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="126" y="106" width="28" height="26" class="combo"/>
+<text x="140" y="119" class="combo tap">&amp;</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
+<text x="196" y="112" class="combo tap">*</text>
+</g>
+<g class="combo combopos-19">
+<rect rx="6" ry="6" x="238" y="106" width="28" height="26" class="combo"/>
+<text x="252" y="119" class="combo tap">(</text>
+</g>
+<g class="combo combopos-20">
+<rect rx="6" ry="6" x="294" y="112" width="28" height="26" class="combo"/>
+<text x="308" y="125" class="combo tap">)</text>
+</g>
 </g>
 </g>
 </svg>

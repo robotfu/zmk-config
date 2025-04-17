@@ -226,26 +226,6 @@
             key-positions = <0 28>;
         };
 
-        kt_sht {
-            bindings = <&kt LSHIFT>;
-            key-positions = <17 33>;
-        };
-
-        kt_ctl {
-            bindings = <&kt LCTRL>;
-            key-positions = <16 33>;
-        };
-
-        kt_lalt {
-            bindings = <&kt LEFT_ALT>;
-            key-positions = <33 15>;
-        };
-
-        kt_lwin {
-            bindings = <&kt LGUI>;
-            key-positions = <14 33>;
-        };
-
         to_home {
             bindings = <&to 0>;
             key-positions = <28 29>;

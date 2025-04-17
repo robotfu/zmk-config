@@ -113,14 +113,29 @@
                 bindings = <&to 4>;
             };
 
-            fun {
-                sequence = <G>;
-                bindings = <&to 6>;
-            };
-
             cap {
                 sequence = <COLON>;
                 bindings = <&caps_word>;
+            };
+
+            win {
+                sequence = <A>;
+                bindings = <&kt LWIN>;
+            };
+
+            alt {
+                sequence = <S>;
+                bindings = <&kt LALT>;
+            };
+
+            ctl {
+                sequence = <D>;
+                bindings = <&kt LCTRL>;
+            };
+
+            sft {
+                sequence = <F>;
+                bindings = <&kt LSHFT>;
             };
         };
 

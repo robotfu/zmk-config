@@ -101,29 +101,14 @@
                 bindings = <&kp PRINTSCREEN>;
             };
 
+            nav {
+                sequence = <SPACE>;
+                bindings = <&to 2>;
+            };
+
             med {
-                sequence = <M E>;
-                bindings = <&to 3>;
-            };
-
-            skw {
-                sequence = <A>;
-                bindings = <&sk LGUI>;
-            };
-
-            ska {
-                sequence = <S>;
-                bindings = <&sk LALT>;
-            };
-
-            skc {
-                sequence = <D>;
-                bindings = <&sk LCTRL>;
-            };
-
-            sks {
-                sequence = <F>;
-                bindings = <&sk LSHFT>;
+                sequence = <TAB>;
+                bindings = <&to 4>;
             };
 
             fun {

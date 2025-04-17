@@ -226,9 +226,9 @@
             key-positions = <0 28>;
         };
 
-        to_home {
+        cancel {
             bindings = <&to 0>;
-            key-positions = <28 29>;
+            key-positions = <32 43>;
         };
 
         fun {
@@ -245,12 +245,6 @@
         leader {
             bindings = <&urob__leader_1>;
             key-positions = <14 15>;
-        };
-
-        both_hand {
-            bindings = <&to 0>;
-            key-positions = <16 17>;
-            layers = <1>;
         };
 
         // nav_auto_layer-combo {

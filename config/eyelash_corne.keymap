@@ -39,14 +39,12 @@
 
 / {
     behaviors {
-
         kt_off: key_toggle_off_only {
             compatible = "zmk,behavior-key-toggle";
             #binding-cells = <1>;
             display-name = "Key Toggle Off";
             toggle-mode = "off";
         };
-
 
         ssp__urob__hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -217,7 +215,7 @@
             require-prior-idle-ms = <50>;
         };
 
-        lbootloader {
+        bl {
             bindings = <&bootloader>;
             key-positions = <0 28>;
         };
@@ -248,6 +246,11 @@
         leader_2 {
             bindings = <&urob__leader_1>;
             key-positions = <29 30>;
+        };
+
+        reset {
+            bindings = <&sys_reset>;
+            key-positions = <13 28>;
         };
 
         // nav_auto_layer-combo {

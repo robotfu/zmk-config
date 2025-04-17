@@ -209,6 +209,26 @@
             key-positions = <0 28>;
         };
 
+        kt_sht {
+            bindings = <&kt LSHIFT>;
+            key-positions = <17 33>;
+        };
+
+        kt_ctl {
+            bindings = <&kt LCTRL>;
+            key-positions = <16 33>;
+        };
+
+        kt_lalt {
+            bindings = <&kt LEFT_ALT>;
+            key-positions = <33 15>;
+        };
+
+        kt_lwin {
+            bindings = <&kt LGUI>;
+            key-positions = <14 33>;
+        };
+
         // nav_auto_layer-combo {
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;
@@ -248,10 +268,10 @@
 
         left {
             bindings = <
-&kp EQUAL  &kp P                        &kp O                           &kp I                          &kp U                      &kp Y                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &ssp__urob__hmr LGUI SQT     &ssp__urob__hmr LALT L          &ssp__urob__hmr LCTRL K        &ssp__urob__hmr LSHFT J    &kp H                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH   &ssp__sk_hold_tap LWIN FSLH  &ssp__sk_hold_tap LEFT_ALT DOT  &ssp__sk_hold_tap LCTRL COMMA  &ssp__sk_hold_tap LSHFT M  &kp N        &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                                        &lt 7 DELETE                   &lt 5 BACKSPACE            &lt 6 ENTER                                   &trans  &trans  &trans
+&kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH   &kp FSLH                  &kp DOT                 &kp COMMA                &kp M                    &kp N        &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                             &lt 7 DELETE             &lt 5 BACKSPACE          &lt 6 ENTER                                   &trans  &trans  &trans
             >;
 
             label = "left";

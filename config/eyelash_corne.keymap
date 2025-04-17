@@ -256,14 +256,21 @@
             key-positions = <17 18>;
         };
 
-        to_left {
+        left_hand {
             bindings = <&to 1>;
             key-positions = <16 17>;
+            layers = <0>;
         };
 
         leader {
             bindings = <&urob__leader_1>;
             key-positions = <14 15>;
+        };
+
+        both_hand {
+            bindings = <&to 0>;
+            key-positions = <16 17>;
+            layers = <1>;
         };
 
         // nav_auto_layer-combo {

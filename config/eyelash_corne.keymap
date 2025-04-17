@@ -235,7 +235,7 @@
             key-positions = <16 17>;
             layers = <0>;
             timeout-ms = <25>;
-            require-prior-idle-ms = <24>;
+            require-prior-idle-ms = <10>;
         };
 
         leader_1 {

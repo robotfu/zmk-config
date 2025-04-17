@@ -103,7 +103,7 @@
 
             nav {
                 sequence = <SPACE>;
-                bindings = <&to 2>;
+                bindings = <&to 9>;
             };
 
             med {
@@ -114,6 +114,11 @@
             fun {
                 sequence = <G>;
                 bindings = <&to 6>;
+            };
+
+            cap {
+                sequence = <COLON>;
+                bindings = <&caps_word>;
             };
         };
 

@@ -139,6 +139,35 @@
             };
         };
 
+        urob__leader_2: urob__leader_2 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+
+            winoff {
+                sequence = <A>;
+                bindings = <&kt LWIN>;
+                toggle-mode = "off";
+            };
+
+            altoff {
+                sequence = <S>;
+                bindings = <&kt LALT>;
+                toggle-mode = "off";
+            };
+
+            ctloff {
+                sequence = <D>;
+                bindings = <&kt LCTRL>;
+                toggle-mode = "off";
+            };
+
+            sftoff {
+                sequence = <F>;
+                bindings = <&kt LSHFT>;
+                toggle-mode = "off";
+            };
+        };
+
         ssp__sk_hold_tap: sk_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&sk>, <&kp>;
@@ -147,37 +176,6 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
-
-        // urob__auto_layer_nav: urob__auto_layer_nav {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     #binding-cells = <1>;
-        //     continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END>;
-        //     ignore-modifiers;
-        // };
-        // urob__auto_layer_media: urob__auto_layer_media {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     #binding-cells = <1>;
-        //     continue-list = <C_PREVIOUS C_VOL_DN C_VOL_UP C_NEXT BT_CLR BT_SEL 0 BT_SEL 1 BT_SEL 2 BT_SEL 3 BT_SEL 4 C_STOP C_PLAY_PAUSE C_MUTE>;
-        //     ignore-modifiers;
-        // };
-        // urob__auto_layer_sym: urob__auto_layer_sym {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     #binding-cells = <1>;
-        //     continue-list = <LEFT_BRACE AMPERSAND ASTERISK LEFT_PARENTHESIS RIGHT_BRACE COLON DOLLAR PERCENT CARET PLUS LSHFT LCTRL LALT LGUI TILDE EXCLAMATION AT_SIGN HASH PIPE LEFT_PARENTHESIS RIGHT_PARENTHESIS UNDERSCORE>;
-        //     ignore-modifiers;
-        // };
-        // urob__auto_layer_num: urob__auto_layer_num {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     #binding-cells = <1>;
-        //     continue-list = <LBKT N7 N8 N9 RBKT SEMI N4 N5 N6 EQUAL LSHFT LCTRL LALT LGUI GRAVE N1 N2 N3 BSLH PERIOD N0 MINUS>;
-        //     ignore-modifiers;
-        // };
-        // urob__auto_layer_fun: urob__auto_layer_fun {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     #binding-cells = <1>;
-        //     continue-list = <F12 F7 F8 F9 PSCRN F11 F4 F5 F6 SCROLLLOCK LSHFT LCTRL LALT LGUI F10 F1 F2 F3 PAUSE_BREAK C_MENU SPACE TAB>;
-        //     ignore-modifiers;
-        // };
     };
 
     rgb_encoder: rgb_encoder {

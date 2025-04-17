@@ -244,9 +244,14 @@
             require-prior-idle-ms = <25>;
         };
 
-        leader {
+        leader_1 {
             bindings = <&urob__leader_1>;
             key-positions = <14 15>;
+        };
+
+        leader_2 {
+            bindings = <&urob__leader_1>;
+            key-positions = <29 30>;
         };
 
         // nav_auto_layer-combo {

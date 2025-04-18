@@ -172,6 +172,15 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        fun_colon_semi: fun_colon_semi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUN_COLON_SEMI";
+            bindings = <&mo>, <&ssp__colon_semi>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -331,16 +340,16 @@
         home {
             display-name = "home";
             bindings = <
-&kp GRAVE         &kp Q                   &kp W                   &kp E                    &kp R                    &kp T                         &kp UP_ARROW             &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
-&ssp__colon_semi  &ssp__urob__hml LWIN A  &ssp__urob__hml LALT S  &ssp__urob__hml LCTRL D  &ssp__urob__hml LSHFT F  &kp G               &kp LEFT  &tog 8        &kp RIGHT  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
-&urob__leader_1   &kp Z                   &kp X                   &kp C                    &kp V                    &kp B      &to 1              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
-                                                                  &lt 4 ESCAPE             &lt 2 SPACE              &lt 3 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE          &lt 7 DELETE
+&kp GRAVE            &lt 5 Q                 &kp W                   &kp E                    &kp R                    &kp T                         &kp UP_ARROW             &kp Y        &kp U                    &kp I                    &kp O                   &kp P                     &kp EQUAL
+&fun_colon_semi 7 0  &ssp__urob__hml LWIN A  &ssp__urob__hml LALT S  &ssp__urob__hml LCTRL D  &ssp__urob__hml LSHFT F  &kp G               &kp LEFT  &tog 8        &kp RIGHT  &kp H        &ssp__urob__hmr LSHFT J  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LALT L  &ssp__urob__hmr LGUI SQT  &kp MINUS
+&urob__leader_1      &lt 9 Z                 &kp X                   &kp C                    &kp V                    &kp B      &to 1              &kp DOWN                 &kp N        &kp M                    &kp COMMA                &kp DOT                 &kp FSLH                  &kp BACKSLASH
+                                                                     &lt 4 ESCAPE             &lt 2 SPACE              &lt 3 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE          &lt 7 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
-        left {
+        mir {
             bindings = <
 &kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -348,10 +357,10 @@
                                                              &lt 7 DELETE             &lt 5 BACKSPACE          &lt 6 ENTER                                   &trans  &trans  &trans
             >;
 
-            label = "left";
+            label = "mirror";
         };
 
-        lm {
+        nav {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans                   &trans          &trans      &kp HOME       &kp UP_ARROW  &kp END        &trans     &trans
 &trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans           &trans  &trans  &trans  &kp CAPS    &kp LEFT       &kp DOWN      &kp RIGHT      &kp RIGHT  &trans
@@ -362,7 +371,7 @@
             label = "nav";
         };
 
-        lr {
+        mou {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans                   &trans          &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
 &trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans           &trans  &trans  &trans  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
@@ -373,7 +382,7 @@
             label = "mouse";
         };
 
-        ll {
+        med {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans                   &trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI
 &trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans           &trans  &trans  &trans  &trans           &kp C_PREVIOUS    &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR
@@ -384,19 +393,19 @@
             label = "media";
         };
 
-        rm {
+        num {
             bindings = <
 &trans  &trans   &kp N7  &kp N8  &kp N9  &trans                     &kp PAGE_UP             &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp N0   &kp N4  &kp N5  &kp N6  &trans           &kp HOME  &trans         &kp END  &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans
 &trans  &kp DOT  &kp N1  &kp N2  &kp N3  &trans  &to 0              &kp PAGE_DOWN           &trans  &trans     &trans     &trans    &trans    &trans
-                         &trans  &trans  &trans                                             &trans  &trans     &trans
+                         &trans  &kp N0  &trans                                             &trans  &trans     &trans
             >;
 
             label = "num";
             sensor-bindings = <&inc_dec_kp DOWN UP_ARROW>;
         };
 
-        rl {
+        sym {
             bindings = <
 &trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE                   &trans          &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS                  &trans  &trans  &trans  &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans
@@ -407,7 +416,7 @@
             label = "sym";
         };
 
-        rr {
+        fun {
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PSCRN                         &trans          &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK            &trans  &trans  &trans  &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans

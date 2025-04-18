@@ -320,7 +320,6 @@
         lock_nav {
             bindings = <&to 9>;
             key-positions = <30 16 32>;
-            layers = <0 1>;
         };
 
         back_nav {

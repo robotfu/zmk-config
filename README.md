@@ -1,6 +1,6 @@
 ### `urob__leader_1`: Activate Functions
 
-- `P` → `R`: Take a screenshot (`PRINTSCREEN`)  
+- `E` → `R`: Take a screenshot (`PRINTSCREEN`)  
 - `SPACE`: Switch to layer 9  
 - `TAB`: Switch to layer 4  
 - `:` (COLON): Enable Caps Word  

@@ -316,27 +316,6 @@
             bindings = <&kp DEL>;
             key-positions = <16 30>;
         };
-
-        // nav_auto_layer-combo {
-        //     bindings = <&urob__auto_layer_nav 1>;
-        //     key-positions = <33 18>;
-        // };
-        // num_auto_layer-combo {
-        //     bindings = <&urob__auto_layer_num 4>;
-        //     key-positions = <36 22>;
-        // };
-        // sym_auto_layer-combo {
-        //     bindings = <&urob__auto_layer_sym 5>;
-        //     key-positions = <23 37>;
-        // };
-        // fun_auto_layer-combo {
-        //     bindings = <&urob__auto_layer_fun 6>;
-        //     key-positions = <38 24>;
-        // };
-        // med_auto_layer-combo {
-        //     bindings = <&urob__auto_layer_media 3>;
-        //     key-positions = <16 31>;
-        // };
     };
 
     keymap {

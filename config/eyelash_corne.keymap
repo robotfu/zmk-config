@@ -317,17 +317,6 @@
             key-positions = <16 30>;
         };
 
-        lock_nav {
-            bindings = <&to 9>;
-            key-positions = <30 16 32>;
-        };
-
-        back_nav {
-            bindings = <&to 0>;
-            key-positions = <30 16 32>;
-            layers = <9>;
-        };
-
         // nav_auto_layer-combo {
         //     bindings = <&urob__auto_layer_nav 1>;
         //     key-positions = <33 18>;

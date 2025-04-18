@@ -99,7 +99,7 @@
             #binding-cells = <0>;
 
             prs {
-                sequence = <P R>;
+                sequence = <E R>;
                 bindings = <&kp PRINTSCREEN>;
             };
 

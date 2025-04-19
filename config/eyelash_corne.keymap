@@ -210,15 +210,15 @@
         lplt {
             bindings = <&ssp__left_paren_lt>;
             key-positions = <23 24>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <25>;
         };
 
         rplt {
             bindings = <&ssp__right_paren_gt>;
             key-positions = <24 25>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <25>;
         };
 
         bl {

@@ -337,10 +337,10 @@
 
         mir {
             bindings = <
-&kp EQUAL  &kp P                     &kp O                   &kp I                    &kp U                    &kp Y                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &ssp__urob__hmr LGUI SQT  &ssp__urob__hmr LALT L  &ssp__urob__hmr LCTRL K  &ssp__urob__hmr LSHFT J  &kp H                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH   &kp FSLH                  &kp DOT                 &kp COMMA                &kp M                    &kp N        &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                             &lt 7 DELETE             &lt 5 BACKSPACE          &lt 6 ENTER                                   &trans  &trans  &trans
+&kp EQUAL  &kp P         &kp O       &kp I         &kp U            &kp Y                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &mt LGUI SQT  &mt LALT L  &mt LCTRL K   &mt LSHFT J      &kp H                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH   &kp FSLH      &kp DOT     &kp COMMA     &kp M            &kp N        &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                     &lt 7 DELETE  &lt 5 BACKSPACE  &lt 6 ENTER                                   &trans  &trans  &trans
             >;
 
             label = "mirror";

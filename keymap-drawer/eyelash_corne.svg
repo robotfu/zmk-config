@@ -3208,6 +3208,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="154" y="102" width="28" height="26" class="combo"/>
 <use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="159" y="106" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
+<g class="combo combopos-22">
+<path d="M196,126 l-39,14" class="combo"/>
+<path d="M196,126 l39,14" class="combo"/>
+<rect rx="6" ry="6" x="182" y="113" width="28" height="26" class="combo"/>
+<a href="#l_nav">
+<text x="196" y="126" class="combo tap layer-activator">l_nav</text>
+</a><text x="196" y="137" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 </svg>

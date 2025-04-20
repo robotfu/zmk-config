@@ -13,7 +13,7 @@ include:
   #   artifact-name: eyelash_corne_studio_left
   - board: eyelash_corne_left
     shield: settings_reset
-    #snippet: zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: eyelash_corne_left
     shield: nice_view_gem
     artifact-name: gem_left

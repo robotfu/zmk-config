@@ -322,15 +322,8 @@
         };
 
         lock_lnav {
-            bindings = <&to 9>;
+            bindings = <&tog 9>;
             key-positions = <30 16 32>;
-            layers = <0 1>;
-        };
-
-        back_lnav {
-            bindings = <&to 0>;
-            key-positions = <30 16 32>;
-            layers = <9>;
         };
     };
 

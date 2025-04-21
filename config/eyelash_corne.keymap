@@ -39,7 +39,7 @@
 
 / {
     behaviors {
-        kt_off: key_toggle_off_only {
+        toggle_mod_off: toggle_mod_off {
             compatible = "zmk,behavior-key-toggle";
             #binding-cells = <1>;
             display-name = "Key Toggle Off";
@@ -60,7 +60,21 @@
             label = "homerow mods left from urob";
         };
 
-        ssp__left_paren_lt: ssp__left_paren_lt {
+        hmr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <105>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
+            label = "homerow mods right from urob";
+            hold-trigger-key-positions = <47 46 45 44 43 42 33 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
+        };
+
+        shift_paren_or_lt: shift_paren_or_lt {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
@@ -68,7 +82,7 @@
             mods = <(MOD_LSFT)>;
         };
 
-        ssp__right_paren_gt: ssp__right_paren_gt {
+        shift_paren_or_gt: shift_paren_or_gt {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
@@ -76,7 +90,7 @@
             mods = <(MOD_LSFT)>;
         };
 
-        ssp__colon_semi: ssp__colon_semi {
+        shift_colon_or_semi: shift_colon_or_semi {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp COLON>, <&kp SEMICOLON>;
 
@@ -84,7 +98,25 @@
             mods = <(MOD_LSFT)>;
         };
 
-        urob__leader_1: urob__leader_1 {
+        stickykey_holdtap: stickykey_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&sk>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        layer_fun_or_colon: layer_fun_or_colon {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUN_COLON_SEMI";
+            bindings = <&mo>, <&shift_colon_or_semi>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        leader_1: leader_1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
 
@@ -129,7 +161,7 @@
             };
         };
 
-        urob__leader_2: urob__leader_2 {
+        leader_2: leader_2 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
 
@@ -152,38 +184,6 @@
                 sequence = <F>;
                 bindings = <&kt_off LSHFT>;
             };
-        };
-
-        ssp__sk_hold_tap: sk_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&sk>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        fun_colon_semi: fun_colon_semi {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FUN_COLON_SEMI";
-            bindings = <&mo>, <&ssp__colon_semi>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        hmr: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <105>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            quick-tap-ms = <175>;
-            label = "homerow mods right from urob";
-            hold-trigger-key-positions = <47 46 45 44 43 42 33 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
         };
     };
 
@@ -215,25 +215,25 @@
         };
 
         lplt {
-            bindings = <&ssp__left_paren_lt>;
+            bindings = <&shift_paren_or_lt>;
             key-positions = <23 24>;
             timeout-ms = <25>;
             require-prior-idle-ms = <25>;
         };
 
         rplt {
-            bindings = <&ssp__right_paren_gt>;
+            bindings = <&shift_paren_or_gt>;
             key-positions = <24 25>;
             timeout-ms = <25>;
             require-prior-idle-ms = <25>;
         };
 
-        bl {
+        bootloader {
             bindings = <&bootloader>;
             key-positions = <0 28>;
         };
 
-        left_hand {
+        toggle_mirror {
             bindings = <&tog 1>;
             key-positions = <16 17>;
             layers = <0>;
@@ -242,12 +242,12 @@
         };
 
         leader_1 {
-            bindings = <&urob__leader_1>;
+            bindings = <&leader_1>;
             key-positions = <14 15>;
         };
 
         leader_2 {
-            bindings = <&urob__leader_1>;
+            bindings = <&leader_2>;
             key-positions = <29 30>;
         };
 
@@ -324,8 +324,8 @@
             display-name = "home";
             bindings = <
 &kp GRAVE            &lt 5 Q      &kp W        &kp E         &kp R         &kp T                         &kp UP_ARROW             &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
-&fun_colon_semi 7 0  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp LEFT  &tog 8        &kp RIGHT  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
-&urob__leader_1      &lt 5 Z      &kp X        &kp C         &kp V         &lt 6 B    &to 1              &kp DOWN                 &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
+&layer_fun_or_colon 7 0  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp LEFT  &tog 8        &kp RIGHT  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
+&leader_1      &lt 5 Z      &kp X        &kp C         &kp V         &lt 6 B    &to 1              &kp DOWN                 &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
                                                &lt 4 ESCAPE  &lt 2 SPACE   &lt 1 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
 

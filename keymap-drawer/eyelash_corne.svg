@@ -484,7 +484,7 @@ rect.held, rect.combo.held {
 <g transform="translate(28, 161)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;urob__le…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;leader_1</tspan></text>
 </g>
 <g transform="translate(84, 161)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -3143,11 +3143,11 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap"><tspan style="font-size: 60%">&amp;urob__le…</tspan></text>
+<text x="112" y="98" class="combo tap"><tspan style="font-size: 67%">&amp;leader_1</tspan></text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="98" y="141" width="28" height="26" class="combo"/>
-<text x="112" y="154" class="combo tap"><tspan style="font-size: 60%">&amp;urob__le…</tspan></text>
+<text x="112" y="154" class="combo tap"><tspan style="font-size: 67%">&amp;leader_2</tspan></text>
 </g>
 <g class="combo bootloader combopos-8">
 <rect rx="6" ry="6" x="14" y="120" width="28" height="26" class="combo bootloader"/>

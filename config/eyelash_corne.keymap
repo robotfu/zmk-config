@@ -98,13 +98,13 @@
             mods = <(MOD_LSFT)>;
         };
 
-        stickykey_holdtap: stickykey_holdtap {
+        keytoggle_holdtap: keytoggle_holdtap {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&sk>, <&tog>;
+            bindings = <&kt>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
         };
 
         layer_fun_or_colon: layer_fun_or_colon {
@@ -234,7 +234,7 @@
         };
 
         tog_num_sk_ctl {
-            bindings = <&stickykey_holdtap LCTRL 1>;
+            bindings = <&keytoggle_holdtap LCTRL 1>;
             key-positions = <16 17>;
             layers = <0>;
             timeout-ms = <25>;
@@ -307,7 +307,7 @@
         };
 
         tog_num_sk_alt {
-            bindings = <&stickykey_holdtap LEFT_ALT 5>;
+            bindings = <&keytoggle_holdtap LEFT_ALT 5>;
             key-positions = <16 15>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
@@ -315,7 +315,7 @@
         };
 
         tog_num_sk_win {
-            bindings = <&stickykey_holdtap LEFT_WIN 6>;
+            bindings = <&keytoggle_holdtap LEFT_WIN 6>;
             key-positions = <14 15>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;

@@ -167,22 +167,22 @@
 
             winoff {
                 sequence = <A>;
-                bindings = <&kt_off LWIN>;
+                bindings = <&toggle_mod_off LWIN>;
             };
 
             altoff {
                 sequence = <S>;
-                bindings = <&kt_off LALT>;
+                bindings = <&toggle_mod_off LALT>;
             };
 
             ctloff {
                 sequence = <D>;
-                bindings = <&kt_off LCTRL>;
+                bindings = <&toggle_mod_off LCTRL>;
             };
 
             sftoff {
                 sequence = <F>;
-                bindings = <&kt_off LSHFT>;
+                bindings = <&toggle_mod_off LSHFT>;
             };
         };
     };

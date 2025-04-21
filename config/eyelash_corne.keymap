@@ -104,7 +104,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
         };
 
         layer_fun_or_colon: layer_fun_or_colon {
@@ -236,7 +236,6 @@
         tog_num_sk_ctl {
             bindings = <&keytoggle_holdtap LCTRL 1>;
             key-positions = <16 17>;
-            layers = <0>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
         };
@@ -307,19 +306,17 @@
         };
 
         tog_num_sk_alt {
-            bindings = <&keytoggle_holdtap LEFT_ALT 5>;
-            key-positions = <16 15>;
+            bindings = <&tog 5>;
+            key-positions = <16 15 7 22>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
         };
 
         tog_num_sk_win {
-            bindings = <&keytoggle_holdtap LEFT_WIN 6>;
+            bindings = <&tog 6>;
             key-positions = <14 15>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
         };
     };
 

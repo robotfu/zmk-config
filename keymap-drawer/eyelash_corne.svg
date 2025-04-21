@@ -3198,16 +3198,20 @@ rect.held, rect.combo.held {
 </a><text x="196" y="137" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-19">
-<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<path d="M420,78 l-205,5" class="combo"/>
+<path d="M420,78 l-261,11" class="combo"/>
+<path d="M420,78 l234,-34" class="combo"/>
+<path d="M420,78 l233,18" class="combo"/>
+<rect rx="6" ry="6" x="406" y="65" width="28" height="26" class="combo"/>
 <a href="#num">
-<text x="168" y="87" class="combo tap layer-activator">num</text>
-</a><use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="160" y="83" height="15" width="15.0" class="combo hold glyph mdi:apple-keyboard-option"/>
+<text x="420" y="78" class="combo tap layer-activator">num</text>
+</a><text x="420" y="89" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
 <a href="#sym">
 <text x="112" y="98" class="combo tap layer-activator">sym</text>
-</a><text x="112" y="109" class="combo hold"><tspan style="font-size: 75%">LEFT WIN</tspan></text>
+</a><text x="112" y="109" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

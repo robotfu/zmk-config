@@ -233,18 +233,8 @@
             key-positions = <0 28>;
         };
 
-        cancel {
-            bindings = <&to 0>;
-            key-positions = <32 43>;
-        };
-
-        fun {
-            bindings = <&to 7>;
-            key-positions = <17 18>;
-        };
-
         left_hand {
-            bindings = <&to 1>;
+            bindings = <&tog 1>;
             key-positions = <16 17>;
             layers = <0>;
             timeout-ms = <25>;

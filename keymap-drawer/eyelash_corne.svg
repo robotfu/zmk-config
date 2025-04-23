@@ -3213,6 +3213,27 @@ rect.held, rect.combo.held {
 <text x="112" y="98" class="combo tap layer-activator">sym</text>
 </a><text x="112" y="109" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-21">
+<path d="M168,126 l-66,-16" class="combo"/>
+<path d="M168,126 l66,16" class="combo"/>
+<rect rx="6" ry="6" x="154" y="113" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="159" y="117" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-control"/>
+<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="160" y="122" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-22">
+<path d="M140,122 l-38,-12" class="combo"/>
+<path d="M140,122 l38,12" class="combo"/>
+<rect rx="6" ry="6" x="126" y="109" width="28" height="26" class="combo"/>
+<text x="140" y="122" class="combo tap">
+<tspan x="140" dy="-0.6em">LEFT</tspan><tspan x="140" dy="1.2em">WIN</tspan>
+</text>
+<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="132" y="118" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-23">
+<rect rx="6" ry="6" x="98" y="113" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="103" y="117" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-option"/>
+<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="104" y="122" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
 </g>
 </g>
 </svg>

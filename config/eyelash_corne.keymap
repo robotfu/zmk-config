@@ -120,8 +120,13 @@
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
 
-            prs {
+            ctl-prs {
                 sequence = <E R>;
+                bindings = <&kp LC(PRINTSCREEN)>;
+            };
+
+            prs {
+                sequence = <F E>;
                 bindings = <&kp PRINTSCREEN>;
             };
 

@@ -318,6 +318,21 @@
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
         };
+
+        sk-ctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <14 32>;
+        };
+
+        sk-win {
+            bindings = <&sk LEFT_WIN>;
+            key-positions = <14 31>;
+        };
+
+        sk-alt {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <14 30>;
+        };
     };
 
     keymap {

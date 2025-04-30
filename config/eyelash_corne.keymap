@@ -250,46 +250,6 @@
             key-positions = <13 28>;
         };
 
-        sn1 {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <1 14>;
-        };
-
-        sn2 {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 15>;
-        };
-
-        sn3 {
-            bindings = <&kp HASH>;
-            key-positions = <3 16>;
-        };
-
-        sn4 {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 17>;
-        };
-
-        sn5 {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 18>;
-        };
-
-        sn6 {
-            bindings = <&kp CARET>;
-            key-positions = <14 29>;
-        };
-
-        sn7 {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <15 30>;
-        };
-
-        sn8 {
-            bindings = <&kp ASTERISK>;
-            key-positions = <16 31>;
-        };
-
         enter {
             bindings = <&kp ENTER>;
             key-positions = <17 32>;
@@ -310,32 +270,32 @@
             key-positions = <30 16 32>;
         };
 
-        tog_num_sk_alt {
+        tog_num {
             bindings = <&tog 5>;
-            key-positions = <16 15 7 22>;
+            key-positions = <15 3 17>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
         };
 
-        tog_num_sk_win {
+        tog_sym {
             bindings = <&tog 6>;
-            key-positions = <14 15>;
+            key-positions = <2 16 4>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
         };
 
-        sk-ctrl {
-            bindings = <&sk LCTRL>;
+        kt-ctrl {
+            bindings = <&kt LCTRL>;
             key-positions = <14 32>;
         };
 
-        sk-win {
-            bindings = <&sk LEFT_WIN>;
+        kt-win {
+            bindings = <&kt LEFT_WIN>;
             key-positions = <14 31>;
         };
 
-        sk-alt {
-            bindings = <&sk LEFT_ALT>;
+        kt-alt {
+            bindings = <&kt LEFT_ALT>;
             key-positions = <14 30>;
         };
     };

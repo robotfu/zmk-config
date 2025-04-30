@@ -3138,7 +3138,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="210" y="74" width="28" height="26" class="combo"/>
 <a href="#mirror">
 <text x="224" y="87" class="combo tap layer-activator">mirror</text>
-</a><use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="216" y="83" height="15" width="15.0" class="combo hold glyph mdi:apple-keyboard-control"/>
+</a><text x="224" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo bootloader combopos-6">
 <rect rx="6" ry="6" x="14" y="120" width="28" height="26" class="combo bootloader"/>

@@ -165,31 +165,6 @@
                 bindings = <&kt LSHFT>;
             };
         };
-
-        leader_2: leader_2 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-
-            winoff {
-                sequence = <A>;
-                bindings = <&toggle_mod_off LWIN>;
-            };
-
-            altoff {
-                sequence = <S>;
-                bindings = <&toggle_mod_off LALT>;
-            };
-
-            ctloff {
-                sequence = <D>;
-                bindings = <&toggle_mod_off LCTRL>;
-            };
-
-            sftoff {
-                sequence = <F>;
-                bindings = <&toggle_mod_off LSHFT>;
-            };
-        };
     };
 
     rgb_encoder: rgb_encoder {

@@ -239,7 +239,7 @@
         };
 
         tog_num_sk_ctl {
-            bindings = <&keytoggle_holdtap LCTRL 1>;
+            bindings = <&tog 1>;
             key-positions = <16 17>;
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;

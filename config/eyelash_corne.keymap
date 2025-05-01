@@ -299,6 +299,7 @@
             >;
 
             label = "mirror";
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
         };
 
         nav {

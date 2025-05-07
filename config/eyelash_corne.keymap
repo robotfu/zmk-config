@@ -25,10 +25,7 @@
     trigger-period-ms = <16>;
 };
 
-&lt {
-    quick-tap-ms = <150>;
-    flavor = "hold-preferred";
-};
+&lt { quick-tap-ms = <150>; };
 
 &mt {
     flavor = "tap-preferred";

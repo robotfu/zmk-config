@@ -275,6 +275,21 @@
             bindings = <&tog 3>;
             key-positions = <15 31 17>;
         };
+
+        n1 {
+            bindings = <&kp N1>;
+            key-positions = <32 31>;
+        };
+
+        n2 {
+            bindings = <&kp N2>;
+            key-positions = <31 30>;
+        };
+
+        n3 {
+            bindings = <&kp N3>;
+            key-positions = <29 30>;
+        };
     };
 
     keymap {

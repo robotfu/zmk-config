@@ -210,13 +210,6 @@
             key-positions = <0 28>;
         };
 
-        tog_num_sk_ctl {
-            bindings = <&tog 2>;
-            key-positions = <16 17>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <10>;
-        };
-
         reset {
             bindings = <&sys_reset>;
             key-positions = <13 28>;
@@ -282,23 +275,28 @@
 
         n1 {
             bindings = <&kp N1>;
-            key-positions = <32 31>;
+            key-positions = <16 17>;
             timeout-ms = <25>;
             layers = <0>;
         };
 
         n2 {
             bindings = <&kp N2>;
-            key-positions = <31 30>;
+            key-positions = <16 15>;
             timeout-ms = <25>;
             layers = <0>;
         };
 
         n3 {
             bindings = <&kp N3>;
-            key-positions = <29 30>;
+            key-positions = <32 31>;
             timeout-ms = <25>;
             layers = <0>;
+        };
+
+        n4 {
+            bindings = <&kp N4>;
+            key-positions = <31 30>;
         };
     };
 

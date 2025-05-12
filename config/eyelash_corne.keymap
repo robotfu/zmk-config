@@ -312,7 +312,7 @@
                                                    &lt 4 ESCAPE  &lt 2 SPACE   &lt 2 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         mir {

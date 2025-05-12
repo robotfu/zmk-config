@@ -403,6 +403,7 @@
             >;
 
             label = "l_nav";
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
     };
 

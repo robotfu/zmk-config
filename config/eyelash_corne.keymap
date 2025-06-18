@@ -183,24 +183,24 @@
 
         lb {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <37 38>;
+            key-positions = <3 2>;
         };
 
         rb {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <38 39>;
+            key-positions = <9 10>;
         };
 
         lplt {
             bindings = <&shift_paren_or_lt>;
-            key-positions = <23 24>;
+            key-positions = <3 4>;
             timeout-ms = <25>;
             require-prior-idle-ms = <25>;
         };
 
         rplt {
             bindings = <&shift_paren_or_gt>;
-            key-positions = <24 25>;
+            key-positions = <8 9>;
             timeout-ms = <25>;
             require-prior-idle-ms = <25>;
         };
@@ -282,21 +282,51 @@
 
         n2 {
             bindings = <&kp N2>;
-            key-positions = <16 15>;
+            key-positions = <25 24>;
             timeout-ms = <25>;
             layers = <0>;
         };
 
         n3 {
             bindings = <&kp N3>;
-            key-positions = <32 31>;
+            key-positions = <16 15>;
             timeout-ms = <25>;
             layers = <0>;
         };
 
         n4 {
             bindings = <&kp N4>;
+            key-positions = <25 26>;
+        };
+
+        n5 {
+            bindings = <&kp N5>;
+            key-positions = <15 14>;
+        };
+
+        n6 {
+            bindings = <&kp N6>;
+            key-positions = <37 38>;
+        };
+
+        n7 {
+            bindings = <&kp N7>;
+            key-positions = <32 31>;
+        };
+
+        n8 {
+            bindings = <&kp N8>;
+            key-positions = <38 39>;
+        };
+
+        n9 {
+            bindings = <&kp N9>;
             key-positions = <31 30>;
+        };
+
+        n0 {
+            bindings = <&kp N0>;
+            key-positions = <23 24>;
         };
     };
 

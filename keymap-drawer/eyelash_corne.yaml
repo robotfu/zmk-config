@@ -469,9 +469,9 @@ combos:
 - p: [2, 16, 4]
   k: {t: sym, h: toggle}
   l: [sym, home, mirror]
-- p: [14, 32]
-  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
 - p: [14, 31]
+  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
+- p: [14, 29]
   k: {t: LEFT WIN, h: toggle}
 - p: [14, 30]
   k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}

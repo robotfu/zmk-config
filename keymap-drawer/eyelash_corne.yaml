@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -501,3 +501,5 @@ combos:
   k: {t: '9', s: (}
 - p: [23, 24]
   k: {t: '0', s: )}
+- p: [17, 23]
+  k: $$mdi:apple-keyboard-caps$$

@@ -252,21 +252,6 @@
             layers = <6 0 1>;
         };
 
-        kt-ctrl {
-            bindings = <&kt LCTRL>;
-            key-positions = <14 31>;
-        };
-
-        kt-win {
-            bindings = <&kt LEFT_WIN>;
-            key-positions = <14 29>;
-        };
-
-        kt-alt {
-            bindings = <&kt LEFT_ALT>;
-            key-positions = <14 30>;
-        };
-
         lock_mou {
             bindings = <&tog 3>;
             key-positions = <15 31 17>;

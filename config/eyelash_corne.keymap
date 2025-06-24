@@ -201,8 +201,8 @@
         rplt {
             bindings = <&shift_paren_or_gt>;
             key-positions = <8 9>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <25>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
         };
 
         bootloader {

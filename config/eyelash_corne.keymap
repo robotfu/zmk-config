@@ -71,22 +71,6 @@
             hold-trigger-key-positions = <47 46 45 44 43 42 33 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44>;
         };
 
-        shift_paren_or_lt: shift_paren_or_lt {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        shift_paren_or_gt: shift_paren_or_gt {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         shift_colon_or_semi: shift_colon_or_semi {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp COLON>, <&kp SEMICOLON>;
@@ -191,20 +175,6 @@
             key-positions = <9 10>;
         };
 
-        lplt {
-            bindings = <&shift_paren_or_lt>;
-            key-positions = <3 4>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <25>;
-        };
-
-        rplt {
-            bindings = <&shift_paren_or_gt>;
-            key-positions = <8 9>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
-        };
-
         bootloader {
             bindings = <&bootloader>;
             key-positions = <0 28>;
@@ -267,7 +237,7 @@
 
         n2 {
             bindings = <&kp N2>;
-            key-positions = <25 24>;
+            key-positions = <24 23>;
             timeout-ms = <20>;
             layers = <0>;
         };
@@ -281,7 +251,7 @@
 
         n4 {
             bindings = <&kp N4>;
-            key-positions = <25 26>;
+            key-positions = <25 24>;
             timeout-ms = <20>;
         };
 
@@ -293,7 +263,7 @@
 
         n6 {
             bindings = <&kp N6>;
-            key-positions = <37 38>;
+            key-positions = <26 25>;
             timeout-ms = <20>;
         };
 
@@ -305,7 +275,7 @@
 
         n8 {
             bindings = <&kp N8>;
-            key-positions = <38 39>;
+            key-positions = <37 38>;
             timeout-ms = <20>;
         };
 
@@ -317,7 +287,7 @@
 
         n0 {
             bindings = <&kp N0>;
-            key-positions = <23 24>;
+            key-positions = <38 39>;
             timeout-ms = <20>;
         };
 

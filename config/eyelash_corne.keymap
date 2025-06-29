@@ -79,15 +79,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        keytoggle_holdtap: keytoggle_holdtap {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kt>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-        };
-
         layer_fun_or_colon: layer_fun_or_colon {
             compatible = "zmk,behavior-hold-tap";
             label = "FUN_COLON_SEMI";

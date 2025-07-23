@@ -280,8 +280,8 @@
         };
 
         colon {
-            bindings = <&kp COLON>;
-            key-positions = <23 46>;
+            bindings = <&kp SEMICOLON>;
+            key-positions = <23 37>;
         };
     };
 
@@ -291,10 +291,10 @@
         home {
             display-name = "home";
             bindings = <
-&kp GRAVE                    &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp UP_ARROW             &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
-&FUN_COLON_SEMI 7 SEMICOLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp LEFT  &tog 1        &kp RIGHT  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
-&leader_1                    &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp DOWN                 &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
-                                                       &lt 4 ESCAPE  &lt 2 SPACE   &lt 2 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
+&kp GRAVE                &kp Q        &kp W        &kp E         &kp R         &kp T                         &kp UP_ARROW             &kp Y        &kp U            &kp I         &kp O        &kp P          &kp EQUAL
+&FUN_COLON_SEMI 7 COLON  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp LEFT  &tog 1        &kp RIGHT  &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SQT  &kp MINUS
+&leader_1                &kp Z        &kp X        &kp C         &kp V         &kp B      &to 0              &kp DOWN                 &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH       &kp BACKSLASH
+                                                   &lt 4 ESCAPE  &lt 2 SPACE   &lt 2 TAB                                              &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;

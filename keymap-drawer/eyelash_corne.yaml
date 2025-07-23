@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '=', s: +}
-  - {t: ':', h: fun, s: ;}
+  - {t: ;, h: fun, s: ':'}
   - {t: A, h: LWIN}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -493,3 +493,5 @@ combos:
   k: {t: '0', s: )}
 - p: [17, 23]
   k: $$mdi:apple-keyboard-caps$$
+- p: [23, 46]
+  k: ':'
